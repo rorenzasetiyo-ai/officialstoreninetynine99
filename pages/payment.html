@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran — Ninetynine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/icons/favicon.svg">
+</head>
+<body>
+<!-- PAYMENT PAGE — Step 2: VA / QRIS -->
+<div id="paymentPage" style="display:block;position:relative;inset:0;z-index:10002;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closePaymentPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Pembayaran</span>
+      <div style="display:flex;align-items:center;gap:4px;">
+        <div style="width:24px;height:24px;border-radius:50%;background:#2e7d32;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">✓</div>
+        <div style="width:20px;height:2px;background:#111;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+      </div>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+
+    <!-- Timer -->
+    <div style="background:#fff3e0;border-radius:10px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#f57f17" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#e65100;">Selesaikan pembayaran dalam: </span>
+      <span id="payTimer" style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#D84040;"></span>
+    </div>
+
+    <!-- Amount -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 6px;">Total Pembayaran</p>
+      <p id="payTotalAmount" style="font-family:'Playfair Display',serif;font-size:28px;font-weight:500;color:#D84040;margin:0;"></p>
+      <p id="payOrderIdSmall" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#aaa;margin:6px 0 0;"></p>
+    </div>
+
+    <!-- VA Section (BCA/Mandiri) -->
+    <div id="vaSection" style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div id="payBankLogo" style="padding:4px 10px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;background:#005BAC;">BCA</div>
+        <div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0;">Virtual Account</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Salin nomor VA di bawah</p>
+        </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 6px;">Nomor Virtual Account</p>
+      <div style="display:flex;align-items:center;gap:10px;background:#f8f8f8;border-radius:8px;padding:14px 16px;">
+        <span id="vaNumber" style="font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;color:#111;letter-spacing:0.06em;flex:1;"></span>
+        <button onclick="copyVA()" id="copyVABtn" style="background:#111;color:#fff;border:none;border-radius:6px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">Salin</button>
+      </div>
+      <div style="margin-top:14px;padding:12px;background:#e8f4ff;border-radius:8px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#0277bd;margin:0;line-height:1.6;">
+          📌 Cara bayar:<br>
+          1. Buka m-Banking atau ATM <span id="payBankName">BCA</span><br>
+          2. Pilih Transfer → Virtual Account<br>
+          3. Masukkan nomor VA di atas<br>
+          4. Konfirmasi jumlah & bayar
+        </p>
+      </div>
+    </div>
+
+    <!-- QRIS Section -->
+    <div id="qrisSection" style="display:none;background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0 0 4px;">Scan QRIS</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 16px;">Bisa dibayar dengan semua e-wallet & m-banking</p>
+      <!-- QRIS code (generated pattern) -->
+      <div style="display:flex;justify-content:center;margin-bottom:16px;">
+        <div style="position:relative;width:220px;height:220px;background:#fff;border:2px solid #111;border-radius:12px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+          <canvas id="qrisCanvas" width="196" height="196"></canvas>
+          <!-- Center logo -->
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+            <span style="font-family:'Playfair Display',serif;font-size:10px;font-weight:700;color:#111;">NN</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px;text-align:center;margin-bottom:12px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#888;margin:0 0 2px;">NMID: ID10230712345678</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#111;margin:0;">Ninetynine Official Store</p>
+      </div>
+      <div style="padding:12px;background:#f3e5f5;border-radius:8px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#6a1b9a;margin:0;line-height:1.6;">
+          📌 Cara bayar QRIS:<br>
+          1. Buka aplikasi e-wallet / m-banking<br>
+          2. Pilih "Bayar" / "Scan QR"<br>
+          3. Arahkan kamera ke QR di atas<br>
+          4. Konfirmasi pembayaran
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticky bottom -->
+  <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="confirmPayment()" style="width:100%;padding:15px;background:#2e7d32;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#1b5e20'" onmouseout="this.style.background='#2e7d32'">
+        Saya Sudah Bayar — Konfirmasi
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/state.js"></script>
+  <script src="../js/product.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../js/account.js"></script>
+  <script src="../js/category.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>

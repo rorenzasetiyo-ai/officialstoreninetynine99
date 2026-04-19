@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title id="pageTitle">
+NINETYNINE - Product Detail</title>
+<link rel="stylesheet" href="css/style.css"><style>
+* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9f9f9; } .product-container { max-width: 1200px; margin: 0 auto; padding: 20px; } .back-btn { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; text-decoration: none; color: #333; font-weight: 600; } .back-btn:hover { background: #e0e0e0; } .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); } .product-images { } .main-image { width: 100%; height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; } .thumbnail-images { display: flex; gap: 10px; } .thumbnail { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; } .thumbnail:hover { border-color: #333; } .thumbnail.active { border-color: #000; } .product-info h1 { font-size: 28px; margin-bottom: 10px; } .product-code { color: #999; font-size: 12px; margin-bottom: 10px; } .product-price { font-size: 24px; font-weight: bold; margin-bottom: 25px; } .product-options { margin-bottom: 25px; } .option-group { margin-bottom: 20px; } .option-group label { display: block; font-weight: 600; margin-bottom: 10px; } .size-options { display: flex; gap: 10px; flex-wrap: wrap; } .size-btn { padding: 10px 20px; border: 2px solid #ddd; background: white; border-radius: 4px; cursor: pointer; transition: all 0.3s; font-weight: 500; } .size-btn:hover { border-color: #000; } .size-btn.active { background: #000; color: white; border-color: #000; } .quantity-selector { display: flex; align-items: center; gap: 10px; width: fit-content; } .qty-btn { width: 40px; height: 40px; border: 1px solid #ddd; background: white; cursor: pointer; font-size: 18px; border-radius: 4px; transition: all 0.3s; } .qty-btn:hover { background: #f0f0f0; } .qty-input { width: 60px; padding: 8px; text-align: center; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; } .email-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; margin-bottom: 20px; } .product-description { margin-top: 25px; padding-top: 25px; border-top: 1px solid #eee; } .product-description h3 { margin-bottom: 10px; } .product-description p { color: #666; margin-bottom: 8px; } .action-buttons { display: flex; gap: 10px; margin-top: 25px; } .btn { flex: 1; padding: 15px; border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; } .btn-add-cart { background: white; color: #000; border: 2px solid #000; } .btn-add-cart:hover { background: #f0f0f0; } .btn-buy-now { background: #000; color: white; } .btn-buy-now:hover { background: #333; } .btn-wishlist { width: 50px; background: white; color: #000; border: 2px solid #ddd; font-size: 20px; } .btn-wishlist:hover { border-color: #000; } .btn-wishlist.liked { background: #000; color: white; } .message { padding: 12px; border-radius: 4px; margin-bottom: 15px; display: none; } .message.success { background: #d4edda; color: #155724; display: block; } .message.error { background: #f8d7da; color: #721c24; display: block; } .message.info { background: #d1ecf1; color: #0c5460; display: block; } @media (max-width: 768px) { .product-detail { grid-template-columns: 1fr; gap: 20px; } .main-image { height: 300px; } .product-info h1 { font-size: 20px; } .action-buttons { flex-direction: column; } .btn-wishlist { width: 100%; } }</style>
+</head>
+<body><div class="product-container"><a href="/" class="back-btn">
+← Kembali ke Beranda</a>
+<div class="product-detail"><div class="product-images"><img id="mainImage" class="main-image" src="" alt="Product"><div class="thumbnail-images" id="thumbnailContainer"></div>
+</div>
+<div class="product-info"><div class="message" id="message"></div>
+<p class="product-code" id="productCode"></p>
+<h1 id="productName"></h1>
+<div class="product-price" id="productPrice"></div>
+<div class="product-options"><div class="option-group" id="sizeGroup" style="display: none;"><label>
+UKURAN</label>
+<div class="size-options" id="sizeOptions"></div>
+</div>
+<div class="option-group"><label>
+QUANTITY</label>
+<div class="quantity-selector"><button class="qty-btn" onclick="decreaseQty()">
+−</button>
+<input class="qty-input" id="quantity" type="number" value="1" min="1"><button class="qty-btn" onclick="increaseQty()">
++</button>
+</div>
+</div>
+<div class="option-group"><label>
+EMAIL (UNTUK KONFIRMASI PESANAN)</label>
+<input class="email-input" id="email" type="email" placeholder="your@email.com"></div>
+</div>
+<div class="product-description"><p id="productDescription"></p>
+<p><strong>
+Material:</strong>
+<span id="productMaterial"></span>
+</p>
+</div>
+<div class="action-buttons"><button class="btn btn-wishlist" id="wishlistBtn" onclick="toggleWishlist()" title="Tambah ke Wishlist">
+♡</button>
+<button class="btn btn-add-cart" onclick="addToCart()">
+🛒 ADD TO CART</button>
+<button class="btn btn-buy-now" onclick="buyNow()">
+BUY NOW</button>
+</div>
+</div>
+</div>
+</div>
+<script defer src="js/config.js"></script>
+<script defer src="js/main.js"></script>
+<script>
+// Get product ID from URL const urlParams = new URLSearchParams(window.location.search); const productId = urlParams.get('id'); let currentProduct = null; let AppState = { cart: JSON.parse(localStorage.getItem('nn_cart') || '[]'), wishlist: JSON.parse(localStorage.getItem('nn_wishlist') || '[]') }; // Initialize function init() { // Wait for PRODUCT_CATALOG to load const checkCatalog = setInterval(() =>
+{ if (typeof PRODUCT_CATALOG !== 'undefined') { clearInterval(checkCatalog); loadProduct(); loadWishlistData(); updateWishlistBtn(); } }, 100); } // Load product data from PRODUCT_CATALOG function loadProduct() { // Find product by ID in the main catalog const product = PRODUCT_CATALOG.find(p =>
+p.id === productId); currentProduct = product || PRODUCT_CATALOG[0]; // Populate page document.getElementById('pageTitle').textContent = currentProduct.name + ' - NINETYNINE'; document.getElementById('productCode').textContent = currentProduct.series; document.getElementById('productName').textContent = currentProduct.name; document.getElementById('productPrice').textContent = currentProduct.price; document.getElementById('productDescription').textContent = currentProduct.description; document.getElementById('productMaterial').textContent = currentProduct.material; // Extract product index from ID (prod_0 =>
+0) const productIndex = productId ? parseInt(productId.split('_')[1]) : 0; const imageCount = 5; // Assume 5 images per product const baseImagePath = `images/img-${productIndex * imageCount}`; // Load main image const mainImg = document.getElementById('mainImage'); mainImg.src = `${baseImagePath}.jpeg`; mainImg.onerror = () =>
+{ mainImg.src = 'images/img-0.jpeg'; }; // Fallback // Load thumbnails const container = document.getElementById('thumbnailContainer'); container.innerHTML = ''; // Clear existing for (let i = 0; i< imageCount; i++) { const thumb = document.createElement('img'); thumb.src = `${baseImagePath.split('-').slice(0, -1).join('-')}-${productIndex * imageCount + i}.jpeg`; thumb.className = 'thumbnail' + (i === 0 ? ' active' : ''); thumb.onclick = () =>
+switchImage(thumb.src, thumb); thumb.onerror = () =>
+{ thumb.style.display = 'none'; }; container.appendChild(thumb); } } function switchImage(img, thumb) { document.getElementById('mainImage').src = img; document.querySelectorAll('.thumbnail').forEach(t =>
+t.classList.remove('active')); thumb.classList.add('active'); } function selectSize(btn, size) { document.querySelectorAll('.size-btn').forEach(b =>
+b.classList.remove('active')); btn.classList.add('active'); } function increaseQty() { const qty = document.getElementById('quantity'); qty.value = parseInt(qty.value) + 1; } function decreaseQty() { const qty = document.getElementById('quantity'); if (parseInt(qty.value) >
+1) qty.value = parseInt(qty.value) - 1; } // Wishlist function loadWishlistData() { AppState.wishlist = JSON.parse(localStorage.getItem('nn_wishlist') || '[]'); } function toggleWishlist() { const idx = AppState.wishlist.findIndex(p =>
+p.id === productId); if (idx >
+-1) { AppState.wishlist.splice(idx, 1); showMessage('Removed from Wishlist ♡', 'info'); } else { AppState.wishlist.push({ id: productId, name: currentProduct.name, series: currentProduct.series, price: currentProduct.price, img: document.getElementById('mainImage')?.src || '' }); showMessage('Added to Wishlist ♥', 'success'); } localStorage.setItem('nn_wishlist', JSON.stringify(AppState.wishlist)); updateWishlistBtn(); // Update navbar badge if on main page if (typeof updateWishlistBadge === 'function') { updateWishlistBadge(); } } function updateWishlistBtn() { const btn = document.getElementById('wishlistBtn'); const isLiked = AppState.wishlist.some(p =>
+p.id === productId); if (isLiked) { btn.classList.add('liked'); btn.textContent = '♥'; btn.style.color = '#B85252'; } else { btn.classList.remove('liked'); btn.textContent = '♡'; btn.style.color = ''; } } // Cart function addToCart() { const email = document.getElementById('email').value; const qty = parseInt(document.getElementById('quantity').value); const selectedSize = document.querySelector('.size-btn.active'); if (!email) { showMessage('⚠️ Masukkan email terlebih dahulu', 'error'); return; } AppState.cart = JSON.parse(localStorage.getItem('nn_cart') || '[]'); const item = { id: productId, name: currentProduct.name, price: currentProduct.price, qty: qty, size: selectedSize ? selectedSize.textContent : 'All Size', email: email, img: document.getElementById('mainImage')?.src || '' }; AppState.cart.push(item); localStorage.setItem('nn_cart', JSON.stringify(AppState.cart)); showMessage('✅ Added to cart! (' + qty + ' items)', 'success'); // Update navbar badge if on main page if (typeof updateCartBadges === 'function') { updateCartBadges(); } // Reset setTimeout(() =>
+{ document.getElementById('quantity').value = 1; document.getElementById('email').value = ''; }, 1500); } // Checkout / Buy Now function buyNow() { const email = document.getElementById('email').value; if (!email) { showMessage('⚠️ Masukkan email terlebih dahulu', 'error'); return; } // Add to cart then go to checkout addToCart(); setTimeout(() =>
+{ window.location.href = 'checkout.html?email=' + encodeURIComponent(email); }, 1000); } function showMessage(text, type) { const msg = document.getElementById('message'); msg.textContent = text; msg.className = 'message ' + type; setTimeout(() =>
+msg.className = 'message', 3000); } // Start init();</script>
+</body>
+</html>

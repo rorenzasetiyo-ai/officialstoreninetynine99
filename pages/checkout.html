@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Ninetynine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/icons/favicon.svg">
+</head>
+<body>
+id="checkoutPage" style="display:block;position:relative;inset:0;z-index:10001;background:#f5f5f5;overflow-y:auto;">
+  <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closeCheckoutPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;" title="Kembali">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">Checkout</span>
+      <!-- Step indicator -->
+      <div style="display:flex;align-items:center;gap:4px;">
+        <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">1</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="width:20px;height:2px;background:#ddd;"></div>
+        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">3</div>
+      </div>
+    </div>
+  </header>
+  <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+    <!-- Order summary mini -->
+    <div id="checkoutOrderSummary" style="background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);"></div>
+
+    <!-- Form -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 16px;">Data Penerima</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Nama Lengkap *</label>
+          <input id="coName" type="text" placeholder="Masukkan nama lengkap" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Email *</label>
+          <input id="coEmail" type="email" placeholder="email@example.com" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#aaa;margin:4px 0 0;">Konfirmasi pesanan akan dikirim ke email ini</p>
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">No. HP / WhatsApp</label>
+          <input id="coPhone" type="tel" placeholder="08xxxxxxxxxx" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'">
+        </div>
+        <div>
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">Alamat Lengkap *</label>
+          <textarea id="coAddress" placeholder="Jl. Contoh No. 1, Kelurahan, Kecamatan, Kota, Kode Pos" rows="3" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#e8e8e8'"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">Metode Pengiriman</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label id="cship-jne" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="JNE Regular" checked style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">JNE Regular</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Estimasi 2–3 hari kerja</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Gratis</span>
+        </label>
+        <label id="cship-jnt" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="J&T Express" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">J&T Express</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Estimasi 1–2 hari kerja</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">Gratis</span>
+        </label>
+        <label id="cship-pickup" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlShip(this)">
+          <input type="radio" name="coShipping" value="Ambil di Toko" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;">
+            <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Ambil di Toko</p>
+            <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Tersedia di semua cabang Ninetynine</p>
+          </div>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#2e7d32;font-weight:600;">Gratis</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Payment method -->
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">Metode Pembayaran</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label id="pay-bca" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="BCA" checked style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Transfer BCA</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Virtual Account BCA</p></div>
+          <span style="background:#005BAC;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">BCA</span>
+        </label>
+        <label id="pay-mandiri" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="Mandiri" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">Transfer Mandiri</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Virtual Account Mandiri</p></div>
+          <span style="background:#003F88;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">MDR</span>
+        </label>
+        <label id="pay-qris" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;" onclick="hlPay(this)">
+          <input type="radio" name="payment" value="QRIS" style="accent-color:#111;width:16px;height:16px;">
+          <div style="flex:1;"><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">QRIS</p><p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">Scan QR dari semua e-wallet & m-banking</p></div>
+          <span style="background:#E8102C;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">QRIS</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky bottom -->
+  <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="goToPaymentStep()" style="width:100%;padding:15px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+        Lanjut ke Pembayaran
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/state.js"></script>
+  <script src="../js/product.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../js/account.js"></script>
+  <script src="../js/category.js"></script>
+  <script src="../js/ui.js"></script>
+</body>
+</html>

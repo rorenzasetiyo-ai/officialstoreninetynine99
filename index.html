@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link href="favicon.ico" rel="icon"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+    Ninetynine — Timeless Elegance
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+  <div class="cursor" id="cursor">
+  </div>
+  <div class="cursor-ring" id="cursorRing">
+  </div>
+  <div class="mobile-menu-overlay" id="mobileOverlay">
+  </div>
+<!-- ═══════════════════════════════════ MOBILE MENU ═══════════════════════════════════ -->
+    <nav class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+    <a class="mobile-menu-brand" data-action="close-menu-scroll" href="#">
+      Ninetynine
+    </a>
+    <button aria-label="Close menu" class="mobile-close" id="mobileClose">
+      ×
+    </button>
+    </div>
+    <div class="mobile-menu-links">
+    <button class="mobile-menu-home" data-action="close-menu">
+      <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+      </path>
+      <polyline points="9 22 9 12 15 12 15 22">
+      </polyline>
+      </svg>
+      Home
+    </button>
+    <a class="sale-link" data-action="close-menu" href="#" style="display:block;padding:14px 24px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#B85252;text-decoration:none;border-bottom:1px solid #f5f5f5;transition:background 0.15s, padding-left 0.15s;">
+      Sale
+    </a>
+    <div class="mobile-category-wrapper">
+      <button class="mobile-category-toggle" id="mobileCategoryToggle" style="background:none;border:none;cursor:pointer;display:block;width:100%;padding:14px 24px;text-align:left;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#222;transition:background 0.15s, color 0.15s, padding-left 0.15s;margin:0;border-bottom:1px solid #f5f5f5;">
+        Category
+        <svg id="mobileCategoryArrow" style="float:right;width:14px;height:14px;stroke:currentColor;transition:transform 0.3s ease;margin-top:2px;pointer-events:auto;cursor:pointer;" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div id="mobileCategoryMenu" class="mobile-category-submenu" style="display:none;background:#f9f9f9;overflow:hidden;position:relative;z-index:100;">
+        <a href="category.html?cat=dress" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Dress</a>
+        <a href="category.html?cat=blouse" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Blouse</a>
+        <a href="category.html?cat=tunic" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Tunic</a>
+        <a href="category.html?cat=outer" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Outer</a>
+        <a href="category.html?cat=sweater" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Sweater</a>
+        <a href="category.html?cat=pants" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Pants</a>
+        <a href="category.html?cat=skirt" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Skirt</a>
+      </div>
+    </div>
+    <a href="#stores" data-action="smooth-scroll" data-target="stores" style="display:block;padding:14px 24px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#222;text-decoration:none;border-bottom:1px solid #f5f5f5;transition:background 0.15s, padding-left 0.15s;">
+      Offline Store
+    </a>
+    </div>
+  </nav>
+<!-- ═══════════════════════════════════ NAVBAR / HEADER ═══════════════════════════════════ -->
+    <header id="navbar">
+    <div class="nav-inner">
+    <button aria-label="Menu" class="hamburger" id="hamburgerBtn">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+    </button>
+    <a class="nav-logo" href="#">
+      Ninetynine
+    </a>
+    <nav>
+      <ul class="nav-menu">
+      <li>
+        <a class="sale-link" href="#">
+        SALE
+        </a>
+      </li>
+      <li class="has-dropdown" style="position:relative;">
+        <a class="dropdown-trigger" href="#" style="display:flex;align-items:center;cursor:pointer;">
+        Category
+        <svg height="10" style="margin-left:3px;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.3s ease;" viewbox="0 0 24 24" width="10">
+          <polyline points="6 9 12 15 18 9">
+          </polyline>
+        </svg>
+        </a>
+        <ul class="dropdown-menu" style="position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:180px;background:#111;border-radius:8px;list-style:none;padding:6px 0;margin:0;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:1000;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.25s ease,visibility 0.25s ease;display:none;">
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=dress" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Dress
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=blouse" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Blouse
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=tunic" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Tunic
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=outer" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Outer
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=sweater" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Sweater
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=pants" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Pants
+          </a>
+        </li>
+        <li>
+          <a href="category.html?cat=skirt" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Skirt
+          </a>
+        </li>
+        </ul>
+      </li>
+      <li>
+        <a data-action="smooth-scroll" data-target="stores" href="#stores">
+        Offline Store
+        </a>
+      </li>
+      </ul>
+    </nav>
+    <div class="nav-icons">
+      <a aria-label="Search" class="nav-icon-btn" href="search.html">
+      <svg style="pointer-events:none;" viewbox="0 0 24 24">
+        <circle cx="11" cy="11" r="7">
+        </circle>
+        <line x1="16.5" x2="22" y1="16.5" y2="22">
+        </line>
+      </svg>
+      </a>
+      <button aria-label="Wishlist" class="nav-icon-btn" data-action="open-wishlist" id="navWishlistBtn" style="position:relative;">
+      <span id="wishlistBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#B85252;color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:700;">
+      </span>
+      <svg viewbox="0 0 24 24">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+        </path>
+      </svg>
+      </button>
+      <button aria-label="Cart" class="nav-icon-btn" data-action="open-cart" style="position:relative;cursor:pointer;">
+      <svg viewbox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+        </path>
+        <line x1="3" x2="21" y1="6" y2="6">
+        </line>
+        <path d="M16 10a4 4 0 0 1-8 0">
+        </path>
+      </svg>
+      <span id="cartBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#B85252;color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:700;">
+      </span>
+      </button>
+      <button aria-label="Account" class="nav-icon-btn" data-action="open-account">
+      <svg viewbox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+        </path>
+        <circle cx="12" cy="7" r="4">
+        </circle>
+      </svg>
+      </button>
+      <a class="nav-login-link" href="auth.html" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark);text-decoration:none;padding:8px 14px;border:1.5px solid var(--dark);border-radius:6px;cursor:pointer;transition:all 0.3s ease;display:inline-flex;align-items:center;font-weight:500;">
+      Login
+      </a>
+    </div>
+    </div>
+  </header>
+<!-- ═══════════════════════════════════ HERO SECTION ═══════════════════════════════════ -->
+    <section id="hero">
+    <video autoplay="" class="hero-video" loop="" muted="" playsinline="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;display:block;">
+    <source src="./images/video-hero.mp4" type="video/mp4"/>
+    Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-fallback" style="position:absolute;inset:0;background:linear-gradient(160deg,#e8e0d8 0%,#d4ccc3 40%,#c8bfb5 100%);z-index:-1;">
+    </div>
+    <div class="hero-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.3);backdrop-filter:blur(3px);z-index:1;">
+    </div>
+    <!-- COMMENTED OUT: Hero content text and buttons
+<div class="hero-content" style="text-align:center;max-width:700px;margin:0 auto;position:relative;z-index:3;padding:40px 20px;"><h1 class="hero-title" style="font-family:'Playfair Display',serif;font-size:clamp(42px,8vw,72px);font-weight:500;margin:0 0 16px;color:#fff;line-height:1.2;">
+Timeless Elegance,<br>
+Modern Femininity</h1>
+<p class="hero-subtitle" style="font-family:'DM Sans',sans-serif;font-size:16px;margin-bottom:48px;color:#f5f5f5;line-height:1.6;font-weight:400;">
+Discover our curated collection of premium fashion celebrating simplicity and grace</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="#bestseller" data-action="smooth-scroll" data-target="bestseller" style="padding:12px 32px;background:#fff;color:#111;border:none;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;font-weight:700;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all 0.3s ease;display:inline-flex;align-items:center;justify-content:center;">
+Shop Collection</a>
+<button data-action="open-looks" style="padding:12px 32px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.7);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;font-weight:700;text-transform:uppercase;cursor:pointer;transition:all 0.3s ease;">
+Explore New Arrivals</button>
+</div>
+</div>
+-->
+  </section>
+<!-- ═══════════════════════════════════ MARQUEE / ANNOUNCEMENT ═══════════════════════════════════ -->
+    <div class="marquee-wrap">
+    <div class="marquee-track">
+    <span>
+      Pengiriman 24 Jam
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Payment via Bank BCA &amp; Mandiri
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman melalui JNE / JNT
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman 24 Jam
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Payment via Bank BCA &amp; Mandiri
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman melalui JNE / JNT
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman 24 Jam
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Payment via Bank BCA &amp; Mandiri
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman melalui JNE / JNT
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman 24 Jam
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Payment via Bank BCA &amp; Mandiri
+    </span>
+    <span class="dot">
+      —
+    </span>
+    <span>
+      Pengiriman melalui JNE / JNT
+    </span>
+    <span class="dot">
+      —
+    </span>
+    </div>
+  </div>
+<!-- ═══════════════════════════════════ BESTSELLER SECTION ═══════════════════════════════════ -->
+    <section id="bestseller">
+    <div class="container">
+    <div class="section-head reveal" style="justify-content:center;text-align:center;">
+      <div>
+      <span class="section-label">
+        Most Loved
+      </span>
+      <h2 class="section-title">
+        Best Seller
+      </h2>
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-card reveal">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_0" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-0" src="images/img-0.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-0" src="images/img-1.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_0" data-name="Siderope Flowbordir" data-price="—" data-series="Code SESTRA 5050 Oneseat">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_0" data-name="Siderope Flowbordir" data-price="—" data-series="Code SESTRA 5050 Oneseat">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code SESTRA 5050 Oneseat
+        </p>
+        <p class="product-name">
+        Siderope Flowbordir
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.1s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_1" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-1" src="images/img-2.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-1" src="images/img-3.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_1" data-name="Cream Bordir Dress" data-price="—" data-series="Code DRLFY 6080">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_1" data-name="Cream Bordir Dress" data-price="—" data-series="Code DRLFY 6080">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRLFY 6080
+        </p>
+        <p class="product-name">
+        Cream Bordir Dress
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.2s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_2" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-2" src="images/img-4.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-2" src="images/img-5.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_2" data-name="Seemivest Bordir Flow Dress" data-price="—" data-series="Code DRYN 6357">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_2" data-name="Seemivest Bordir Flow Dress" data-price="—" data-series="Code DRYN 6357">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYN 6357
+        </p>
+        <p class="product-name">
+        Seemivest Bordir Flow Dress
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.3s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_3" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-3" src="images/img-6.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-3" src="images/img-7.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_3" data-name="3 Pocky Top" data-price="—" data-series="Code TNVX 8307">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_3" data-name="3 Pocky Top" data-price="—" data-series="Code TNVX 8307">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TNVX 8307
+        </p>
+        <p class="product-name">
+        3 Pocky Top
+        </p>
+      </div>
+      </div>
+    </div>
+    </div>
+  </section>
+<!-- ═══════════════════════════════════ COLLECTION SECTION ═══════════════════════════════════ -->
+    <section id="collection">
+    <div class="collection-bg">
+    <img alt="Collection" class="collection-bg-img" src="images/img-97.jpeg"/>
+    </div>
+    <div class="collection-overlay">
+    </div>
+    <div class="collection-content reveal-left visible">
+    <span class="collection-label">
+      Ninetynine — 2026
+    </span>
+    <h2 class="collection-title">
+      Timeless
+      <br/>
+      <em>
+      Daily Essentials
+      </em>
+    </h2>
+    <p class="collection-sub">
+      Discover pieces crafted for the modern woman. Refined silhouettes, premium fabrics, and timeless style.
+    </p>
+    <a class="collection-cta" data-action="open-looks" href="#">
+      Get Your Look Now
+      <svg viewbox="0 0 24 24">
+      <line x1="5" x2="19" y1="12" y2="12">
+      </line>
+      <polyline points="12,5 19,12 12,19">
+      </polyline>
+      </svg>
+    </a>
+    </div>
+  </section>
+  <section id="ourpicks">
+    <div class="container">
+    <div class="section-head reveal">
+      <div>
+      <span class="section-label">
+        Curated For You
+      </span>
+      <h2 class="section-title">
+        Our Picks
+      </h2>
+      </div>
+      <a class="section-head-link" data-action="open-all-products" href="#">
+      Browse All
+      </a>
+    </div>
+    <div class="product-grid">
+      <div class="product-card reveal">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-4" src="images/img-9.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-4" src="images/img-10.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_4" data-name="Flowcolour Cream Blouse" data-price="IDR 128.000" data-series="Code TPSHRL 9157">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_4" data-name="Flowcolour Cream Blouse" data-price="IDR 128.000" data-series="Code TPSHRL 9157">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPSHRL 9157
+        </p>
+        <p class="product-name">
+        Flowcolour Cream Blouse
+        </p>
+        <p class="product-price">
+        IDR 128.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.1s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_5" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-5" src="images/img-11.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-5" src="images/img-12.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_5" data-name="Flow Pearlbelt Dress" data-price="IDR 240.000" data-series="Code DRJSW 00018">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_5" data-name="Flow Pearlbelt Dress" data-price="IDR 240.000" data-series="Code DRJSW 00018">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRJSW 00018
+        </p>
+        <p class="product-name">
+        Flow Pearlbelt Dress
+        </p>
+        <p class="product-price">
+        IDR 240.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.2s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_6" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-6" src="images/img-13.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-6" src="images/img-14.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_6" data-name="Twocolors Bordir Tunic" data-price="IDR 195.000" data-series="Code DRYRI 9300">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_6" data-name="Twocolors Bordir Tunic" data-price="IDR 195.000" data-series="Code DRYRI 9300">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYRI 9300
+        </p>
+        <p class="product-name">
+        Twocolors Bordir Tunic
+        </p>
+        <p class="product-price">
+        IDR 195.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.3s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_7" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-7" src="images/img-15.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-7" src="images/img-16.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_7" data-name="Flow Pattern Dress" data-price="IDR 185.000" data-series="Code DRGNT 00137">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_7" data-name="Flow Pattern Dress" data-price="IDR 185.000" data-series="Code DRGNT 00137">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRGNT 00137
+        </p>
+        <p class="product-name">
+        Flow Pattern Dress
+        </p>
+        <p class="product-price">
+        IDR 185.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_8" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-8" src="images/img-17.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-8" src="images/img-18.jpeg"/>
+        <div class="badge soldout">
+        Sold Out
+        </div>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_8" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_8" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPBAP 3178
+        </p>
+        <p class="product-name">
+        Nudes Vinesbordir Tunic
+        </p>
+        <p class="product-price">
+        IDR 146.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.1s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_9" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-9" src="images/img-19.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-9" src="images/img-20.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_9" data-name="Flowlace Shirt" data-price="IDR 149.000" data-series="Code TPMGR 00020">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_9" data-name="Flowlace Shirt" data-price="IDR 149.000" data-series="Code TPMGR 00020">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPMGR 00020
+        </p>
+        <p class="product-name">
+        Flowlace Shirt
+        </p>
+        <p class="product-price">
+        IDR 149.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.2s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_10" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-10" src="images/img-21.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-10" src="images/img-22.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_10" data-name="Brukat Skirt" data-price="IDR 139.000" data-series="Code TVAVM 5069">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_10" data-name="Brukat Skirt" data-price="IDR 139.000" data-series="Code TVAVM 5069">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TVAVM 5069
+        </p>
+        <p class="product-name">
+        Brukat Skirt
+        </p>
+        <p class="product-price">
+        IDR 139.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.3s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="prod_11" style="cursor:pointer;">
+        <img alt="Product" class="img-main" id="catalog-main-11" src="images/img-23.jpeg"/>
+        <img alt="Product Hover" class="img-hover" id="catalog-hover-11" src="images/img-24.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="prod_11" data-name="Semiouter Flowdress" data-price="IDR 215.000" data-series="Code DRYR 2979">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="prod_11" data-name="Semiouter Flowdress" data-price="IDR 215.000" data-series="Code DRYR 2979">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYR 2979
+        </p>
+        <p class="product-name">
+        Semiouter Flowdress
+        </p>
+        <p class="product-price">
+        IDR 215.000
+        </p>
+      </div>
+      </div>
+    </div>
+    </div>
+  </section>
+<!-- ═══════════════════════════════════ OFFLINE STORES SECTION ═══════════════════════════════════ -->
+    <section id="stores">
+    <div class="container">
+    <div class="section-head reveal">
+      <div>
+      <span class="section-label">
+        Find Us
+      </span>
+      <h2 class="section-title">
+        Visit Our Store
+      </h2>
+      </div>
+    </div>
+    <div class="stores-grid reveal">
+      <div class="store-cell">
+      <img alt="Madiun" src="images/img-25.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Madiun
+        </span>
+        <span class="store-address">
+        Jl. Cokroaminoto No.35
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.08s">
+      <img alt="Ponorogo" src="images/img-26.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Ponorogo
+        </span>
+        <span class="store-address">
+        Jl. HOS Cokroaminoto No.70
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.16s">
+      <img alt="Jombang" src="images/img-27.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Jombang
+        </span>
+        <span class="store-address">
+        Jl. Gus Dur No.114
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.24s">
+      <img alt="Kediri" src="images/img-28.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Kediri
+        </span>
+        <span class="store-address">
+        Jl. Suprapto No.17
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.32s">
+      <img alt="Nganjuk" src="images/img-29.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Nganjuk
+        </span>
+        <span class="store-address">
+        Jl. Yos Sudarso No.25
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.40s">
+      <img alt="Blitar" src="images/img-30.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Blitar
+        </span>
+        <span class="store-address">
+        Jl. Veteran No.119
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.48s">
+      <img alt="Tulungagung" src="images/img-31.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Tulungagung
+        </span>
+        <span class="store-address">
+        Jl. Pangeran Diponegoro
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+      <div class="store-cell" style="animation-delay:0.56s">
+      <img alt="Sidoarjo" src="images/img-32.jpeg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:0;"/>
+      <div class="store-overlay">
+        <span class="store-label">
+        Sidoarjo
+        </span>
+        <span class="store-address">
+        Jl. Gatot Subroto
+        </span>
+        <span class="store-hours">
+        Open Daily
+        </span>
+      </div>
+      </div>
+    </div>
+    </div>
+    <div class="stores-bottom reveal">
+    <h3 class="stores-big-text">
+      Experience
+      <em>
+      Ninetynine
+      </em>
+      <br/>
+      Fashion in Person
+    </h3>
+    <p class="stores-sub">
+      Step into our beautifully curated spaces and discover the full Ninetynine collection with our style team.
+    </p>
+    <a class="stores-btn" href="#">
+      Find Nearest Store
+      <svg fill="none" height="14" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="14">
+      <line x1="5" x2="19" y1="12" y2="12">
+      </line>
+      <polyline points="12,5 19,12 12,19">
+      </polyline>
+      </svg>
+    </a>
+    </div>
+  </section>
+<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+    <footer>
+    <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+      <div class="footer-logo">
+        Ninetynine
+      </div>
+      <p>
+        A women's fashion brand celebrating timeless elegance, modern femininity, and the beauty of simplicity.
+      </p>
+      <div class="social-icons">
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="Instagram">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <rect height="20" rx="5" ry="5" width="20" x="2" y="2">
+          </rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
+          </path>
+          <circle cx="17.5" cy="6.5" fill="white" r="1.5">
+          </circle>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="Facebook">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z">
+          </path>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="X">
+        <svg fill="white" height="20" viewbox="0 0 24 24" width="20">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.604l-5.195-6.791-5.956 6.791H2.421l7.727-8.835L.754 2.25h6.78l4.713 6.231 5.476-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+          </path>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="LinkedIn">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+          </path>
+          <rect height="12" width="4" x="2" y="9">
+          </rect>
+          <circle cx="4" cy="4" r="2">
+          </circle>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;transition:all 0.3s ease;" title="Cloudflare">
+        <svg fill="white" height="20" viewbox="0 0 24 24" width="20">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z">
+          </path>
+        </svg>
+        </a>
+      </div>
+      </div>
+      <div class="footer-col">
+      <h4>
+        Fashion
+      </h4>
+      <ul>
+        <li>
+        <a href="#">
+          About Ninetynine
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          Our Story
+        </a>
+        </li>
+        <li>
+        <a data-action="smooth-scroll" data-target="stores" href="#stores">
+          Offline Store
+        </a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer-col">
+      <h4>
+        Customer Service
+      </h4>
+      <ul>
+        <li>
+        <a href="#">
+          Shipping Information
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          FAQ
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          Contact Us
+        </a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+      <h4>
+        Stay Updated
+      </h4>
+      <p>
+        Subscribe for new arrivals, exclusive offers, and style inspiration.
+      </p>
+      <div class="newsletter-form">
+        <input placeholder="Your email address" type="email"/>
+        <button type="submit">
+        Subscribe
+        </button>
+      </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>
+      © 2026 Ninetynine. All rights reserved.
+      </span>
+      <div class="footer-bottom-links">
+      <a href="#">
+        Privacy Policy
+      </a>
+      <a href="#">
+        Terms of Service
+      </a>
+      <a href="#">
+        Cookie Policy
+      </a>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- ═══════════════════════════════════ WISHLIST PAGE MODAL ═══════════════════════════════════ --><!-- WISHLIST PAGE -->
+  <div id="wishlistPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+        Ninetynine
+      </span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        / Wishlist
+      </span>
+      </div>
+      <button data-action="close-wishlist" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+      ×
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:40px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:32px;display:flex;align-items:baseline;gap:12px;">
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:500;margin:0;">
+      My Wishlist
+      </h1>
+      <span id="wishlistCount" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.1em;">
+      </span>
+    </div>
+    <div id="wishlistEmpty" style="display:none;text-align:center;padding:80px 0;">
+      <svg fill="none" height="48" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px;" viewbox="0 0 24 24" width="48">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+      </path>
+      </svg>
+      <p style="font-family:'DM Sans',sans-serif;color:#999;font-size:14px;margin:0 0 8px;">
+      Wishlist kamu masih kosong
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;color:#bbb;font-size:12px;">
+      Klik ikon ♡ pada produk untuk menyimpannya di sini
+      </p>
+    </div>
+    <div class="product-grid" id="wishlistGrid" style="grid-template-columns:repeat(auto-fill,minmax(min(160px,calc(50% - 8px)),1fr));gap:20px 14px;">
+    </div>
+    </div>
+  </div>
+  <style>
+    /* Wishlist heart active state */
+.wishlist-btn.wishlisted svg { fill: #B85252; stroke: #B85252; }
+.wishlist-btn.wishlisted { background: rgba(184,82,82,0.08) !important; }
+
+/* Wishlist nav badge */
+#navWishlistBtn .wishlist-badge {
+  position: absolute; top: 2px; right: 2px;
+  width: 16px; height: 16px;
+  background: #B85252; color: #fff;
+  border-radius: 50%;
+  font-size: 9px; font-family: 'DM Sans', sans-serif;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; line-height: 1;
+  pointer-events: none;
+}
+
+/* Wishlist remove btn */
+.wishlist-remove-btn {
+  position: absolute; top: 8px; right: 8px;
+  background: rgba(255,255,255,0.9); border: none;
+  border-radius: 50%; width: 28px; height: 28px;
+  cursor: pointer; z-index: 4;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+.wishlist-remove-btn:hover { background: #B85252; transform: scale(1.1); }
+.wishlist-remove-btn:hover svg { stroke: #fff; }
+  </style>
+  <!-- LOOKS PAGE -->
+  <div id="looksPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+        Ninetynine
+      </span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        / Looks
+      </span>
+      </div>
+      <button data-action="close-looks" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+      ×
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:48px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:40px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:10px;">
+      Style Inspiration
+      </span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:500;color:#000;margin:0;">
+      Get Your Look
+      </h1>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,calc(50% - 8px)),1fr));gap:24px 20px;">
+      <!-- Look 1 -->
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#F6F1E9;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        1
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 1
+        </p>
+        </div>
+      </div>
+      </div>
+      <!-- Look 2 -->
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#EDE8E2;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        2
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 2
+        </p>
+        </div>
+      </div>
+      </div>
+      <!-- Look 3 -->
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#E8E4DF;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        3
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 3
+        </p>
+        </div>
+      </div>
+      </div>
+      <!-- Look 4 -->
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#E2DDD7;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        4
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 4
+        </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="newArrivalsPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,64px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+      Ninetynine
+      </span>
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        All Products
+      </span>
+      <button data-action="close-new-arrivals" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+        ×
+      </button>
+      </div>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:48px clamp(12px,4vw,64px) 80px;">
+    <div style="margin-bottom:40px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:10px;">
+      Curated For You
+      </span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:500;color:#000;margin:0;">
+      Our Picks — All Products
+      </h1>
+    </div>
+    <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(160px, calc(50% - 8px)),1fr));gap:20px 12px;">
+      <div class="product-card reveal">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_0" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-33.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-34.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_0" data-name="3Colour Top" data-price="IDR 126.000" data-series="Code TPSKUR 00028">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_0" data-name="3Colour Top" data-price="IDR 126.000" data-series="Code TPSKUR 00028">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPSKUR 00028
+        </p>
+        <p class="product-name">
+        3Colour Top
+        </p>
+        <p class="product-price">
+        IDR 126.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.07s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_1" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-35.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-36.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_1" data-name="FLOWBORDIR DRESS" data-price="IDR 129.000" data-series="Code DRCRSD 00015">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_1" data-name="FLOWBORDIR DRESS" data-price="IDR 129.000" data-series="Code DRCRSD 00015">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRCRSD 00015
+        </p>
+        <p class="product-name">
+        FLOWBORDIR DRESS
+        </p>
+        <p class="product-price">
+        IDR 129.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.14s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_2" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-37.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-38.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_2" data-name="2BT SIDE SKIRT" data-price="IDR 136.000" data-series="Code TPLCRD 00053">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_2" data-name="2BT SIDE SKIRT" data-price="IDR 136.000" data-series="Code TPLCRD 00053">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPLCRD 00053
+        </p>
+        <p class="product-name">
+        2BT SIDE SKIRT
+        </p>
+        <p class="product-price">
+        IDR 136.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.21s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_3" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-39.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-40.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_3" data-name="VEST COLOUR SETSHIRT" data-price="IDR 124.000" data-series="Code TNDLN 8456">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_3" data-name="VEST COLOUR SETSHIRT" data-price="IDR 124.000" data-series="Code TNDLN 8456">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TNDLN 8456
+        </p>
+        <p class="product-name">
+        VEST COLOUR SETSHIRT
+        </p>
+        <p class="product-price">
+        IDR 124.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.28s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-41.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-42.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_4" data-name="FLOWER CHEST DRESS" data-price="IDR 205.000" data-series="Code TPBRKN 7004">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_4" data-name="FLOWER CHEST DRESS" data-price="IDR 205.000" data-series="Code TPBRKN 7004">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPBRKN 7004
+        </p>
+        <p class="product-name">
+        FLOWER CHEST DRESS
+        </p>
+        <p class="product-price">
+        IDR 205.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.35s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_5" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-43.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-44.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_5" data-name="FLOW CREPE BORDIR BLOUSE" data-price="IDR 126.000" data-series="Code TPPML 3443">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_5" data-name="FLOW CREPE BORDIR BLOUSE" data-price="IDR 126.000" data-series="Code TPPML 3443">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPPML 3443
+        </p>
+        <p class="product-name">
+        FLOW CREPE BORDIR BLOUSE
+        </p>
+        <p class="product-price">
+        IDR 126.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.42s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_6" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-45.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-46.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_6" data-name="Brukat Skirt" data-price="IDR 139.000" data-series="Code TVAVM 5069">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_6" data-name="Brukat Skirt" data-price="IDR 139.000" data-series="Code TVAVM 5069">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TVAVM 5069
+        </p>
+        <p class="product-name">
+        Brukat Skirt
+        </p>
+        <p class="product-price">
+        IDR 139.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.49s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_7" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-47.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-48.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_7" data-name="Semiouter Flowdress" data-price="IDR 215.000" data-series="Code DRYR 2979">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_7" data-name="Semiouter Flowdress" data-price="IDR 215.000" data-series="Code DRYR 2979">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYR 2979
+        </p>
+        <p class="product-name">
+        Semiouter Flowdress
+        </p>
+        <p class="product-price">
+        IDR 215.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.56s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_8" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-49.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-50.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_8" data-name="FLORAL BORDIR BLOUSE" data-price="IDR 139.000" data-series="Code TPRFWR 00019">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_8" data-name="FLORAL BORDIR BLOUSE" data-price="IDR 139.000" data-series="Code TPRFWR 00019">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPRFWR 00019
+        </p>
+        <p class="product-name">
+        FLORAL BORDIR BLOUSE
+        </p>
+        <p class="product-price">
+        IDR 139.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.63s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="na_9" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-51.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-52.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="na_9" data-name="SOFTJEANS GOLDBT BLOUSE" data-price="IDR 129.000" data-series="Code DRYN 6357">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="na_9" data-name="SOFTJEANS GOLDBT BLOUSE" data-price="IDR 129.000" data-series="Code DRYN 6357">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYN 6357
+        </p>
+        <p class="product-name">
+        SOFTJEANS GOLDBT BLOUSE
+        </p>
+        <p class="product-price">
+        IDR 129.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.70s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_0" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-53.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-54.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_0" data-name="Flowcolour Cream Blouse" data-price="IDR 128.000" data-series="Code TPSHRL 9157">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_0" data-name="Flowcolour Cream Blouse" data-price="IDR 128.000" data-series="Code TPSHRL 9157">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPSHRL 9157
+        </p>
+        <p class="product-name">
+        Flowcolour Cream Blouse
+        </p>
+        <p class="product-price">
+        IDR 128.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.77s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_1" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-55.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-56.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_1" data-name="Flow Pearlbelt Dress" data-price="IDR 240.000" data-series="Code DRJSW 00018">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_1" data-name="Flow Pearlbelt Dress" data-price="IDR 240.000" data-series="Code DRJSW 00018">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRJSW 00018
+        </p>
+        <p class="product-name">
+        Flow Pearlbelt Dress
+        </p>
+        <p class="product-price">
+        IDR 240.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.84s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_2" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-57.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-58.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_2" data-name="Twocolors Bordir Tunic" data-price="IDR 195.000" data-series="Code DRYRI 9300">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_2" data-name="Twocolors Bordir Tunic" data-price="IDR 195.000" data-series="Code DRYRI 9300">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYRI 9300
+        </p>
+        <p class="product-name">
+        Twocolors Bordir Tunic
+        </p>
+        <p class="product-price">
+        IDR 195.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.91s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_3" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-59.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-60.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_3" data-name="Flow Pattern Dress" data-price="IDR 185.000" data-series="Code DRGNT 00137">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_3" data-name="Flow Pattern Dress" data-price="IDR 185.000" data-series="Code DRGNT 00137">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRGNT 00137
+        </p>
+        <p class="product-name">
+        Flow Pattern Dress
+        </p>
+        <p class="product-price">
+        IDR 185.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.98s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-61.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-62.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPBAP 3178
+        </p>
+        <p class="product-name">
+        Nudes Vinesbordir Tunic
+        </p>
+        <p class="product-price">
+        IDR 146.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.98s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-63.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-64.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_5" data-name="Flowlace Shirt" data-price="IDR 149.000" data-series="Code TPMGR 00020">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TPMGR 00020
+        </p>
+        <p class="product-name">
+        Flowlace Shirt
+        </p>
+        <p class="product-price">
+        IDR 149.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.98s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-65.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-66.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_6" data-name="Brukat Skirt" data-price="IDR 139.000" data-series="Code TVAVM 5069">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code TVAVM 5069
+        </p>
+        <p class="product-name">
+        Brukat Skirt
+        </p>
+        <p class="product-price">
+        IDR 139.000
+        </p>
+      </div>
+      </div>
+      <div class="product-card reveal" style="transition-delay:0.98s">
+      <div class="product-img-wrap" data-action="open-product" data-product-id="ap_4" style="cursor:pointer;">
+        <img alt="Product" class="img-main" src="images/img-67.jpeg"/>
+        <img alt="Product Hover" class="img-hover" src="images/img-68.jpeg"/>
+        <div class="product-actions">
+        <button aria-label="Add to wishlist" class="product-action-btn wishlist-btn" data-action="toggle-wishlist" data-id="ap_4" data-name="Nudes Vinesbordir Tunic" data-price="IDR 146.000" data-series="Code TPBAP 3178">
+          <svg viewbox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+          </svg>
+        </button>
+        <button aria-label="Add to cart" class="product-action-btn" data-action="add-to-cart" data-id="ap_7" data-name="Semiouter Flowdress" data-price="IDR 215.000" data-series="Code DRYR 2979">
+          <svg viewbox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+          </svg>
+        </button>
+        </div>
+      </div>
+      <div class="product-info">
+        <p class="product-series">
+        Code DRYR 2979
+        </p>
+        <p class="product-name">
+        Semiouter Flowdress
+        </p>
+        <p class="product-price">
+        IDR 215.000
+        </p>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="wishlistPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+        Ninetynine
+      </span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        / Wishlist
+      </span>
+      </div>
+      <button style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+      ×
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:40px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:32px;display:flex;align-items:baseline;gap:12px;">
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:500;margin:0;">
+      My Wishlist
+      </h1>
+      <span id="wishlistCount" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.1em;">
+      </span>
+    </div>
+    <div id="wishlistEmpty" style="display:none;text-align:center;padding:80px 0;">
+      <svg fill="none" height="48" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px;" viewbox="0 0 24 24" width="48">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+      </path>
+      </svg>
+      <p style="font-family:'DM Sans',sans-serif;color:#999;font-size:14px;margin:0 0 8px;">
+      Wishlist kamu masih kosong
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;color:#bbb;font-size:12px;">
+      Klik ikon ♡ pada produk untuk menyimpannya di sini
+      </p>
+    </div>
+    <div class="product-grid" id="wishlistGrid" style="grid-template-columns:repeat(auto-fill,minmax(min(160px,calc(50% - 8px)),1fr));gap:20px 14px;">
+    </div>
+    </div>
+  </div>
+  <style>
+    /* Wishlist heart active state */ .wishlist-btn.wishlisted svg { fill: #B85252; stroke: #B85252; } .wishlist-btn.wishlisted { background: rgba(184,82,82,0.08) !important; } /* Wishlist nav badge */ #navWishlistBtn .wishlist-badge { position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; background: #B85252; color: #fff; border-radius: 50%; font-size: 9px; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; justify-content: center; font-weight: 600; line-height: 1; pointer-events: none; } /* Wishlist remove btn */ .wishlist-remove-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; z-index: 4; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: background 0.2s, transform 0.2s; } .wishlist-remove-btn:hover { background: #B85252; transform: scale(1.1); } .wishlist-remove-btn:hover svg { stroke: #fff; } /* Force SVG fill colors for wishlist button */ /* Wishlist button - keep it simple to allow JS changes */
+  </style>
+  <div id="looksPage" style="display:none;position:fixed;inset:0;z-index:9999;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+        Ninetynine
+      </span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        / Looks
+      </span>
+      </div>
+      <button style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+      ×
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:48px clamp(12px,4vw,48px) 80px;">
+    <div style="margin-bottom:40px;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#888;display:block;margin-bottom:10px;">
+      Style Inspiration
+      </span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:500;color:#000;margin:0;">
+      Get Your Look
+      </h1>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,calc(50% - 8px)),1fr));gap:24px 20px;">
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#F6F1E9;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        1
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 1
+        </p>
+        </div>
+      </div>
+      </div>
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#EDE8E2;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        2
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 2
+        </p>
+        </div>
+      </div>
+      </div>
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#E8E4DF;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        3
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 3
+        </p>
+        </div>
+      </div>
+      </div>
+      <div style="cursor:pointer;transition:transform 0.3s;">
+      <div style="background:#E2DDD7;border-radius:16px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden;">
+        <span style="font-family:'Playfair Display',serif;font-size:48px;font-weight:400;color:rgba(0,0,0,0.12);user-select:none;">
+        4
+        </span>
+        <div style="position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 2px;">
+          Style Guide
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:#111;margin:0;">
+          Look 4
+        </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div aria-hidden="true" id="productImageStore" style="display:none;">
+  </div>
+  <div id="productDetailPage" style="display:none;position:fixed;inset:0;z-index:9998;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);z-index:10;border-bottom:1px solid #f0f0f0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;height:64px;">
+      <button data-action="close-product" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;color:#555;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.1em;padding:6px 0;transition:color 0.2s;">
+      <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+        <line x1="19" x2="5" y1="12" y2="12">
+        </line>
+        <polyline points="12 19 5 12 12 5">
+        </polyline>
+      </svg>
+      Back
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;letter-spacing:0.04em;">
+      Ninetynine
+      </span>
+      <button data-action="open-cart" id="pdCartBtn" style="background:none;border:none;cursor:pointer;position:relative;padding:6px;color:#333;" title="Cart">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+        </path>
+        <line x1="3" x2="21" y1="6" y2="6">
+        </line>
+        <path d="M16 10a4 4 0 0 1-8 0">
+        </path>
+      </svg>
+      <span id="pdCartBadge" style="display:none;position:absolute;top:0;right:0;background:#B85252;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:600;">
+      </span>
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,48px) 80px;">
+    <div id="pdContent" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+      <div id="pdMainImg" style="border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;margin-bottom:12px;cursor:zoom-in;">
+        <img id="pdImg1" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:opacity 0.3s;"/>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div id="pdThumb1" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid #111;">
+        <img id="pdThumbImg1" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+        </div>
+        <div id="pdThumb2" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid transparent;">
+        <img id="pdThumbImg2" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
+        </div>
+      </div>
+      </div>
+      <div style="padding-top:8px;">
+      <p id="pdSeries" style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 8px;">
+      </p>
+      <h1 id="pdName" style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:500;color:#111;margin:0 0 8px;line-height:1.2;">
+      </h1>
+      <p id="pdPrice" style="font-family:'DM Sans',sans-serif;font-size:22px;font-weight:500;color:#111;margin:0 0 20px;letter-spacing:0.02em;">
+      </p>
+      <div style="width:40px;height:1px;background:#e0e0e0;margin-bottom:20px;">
+      </div>
+      <div id="pdColorSection" style="margin-bottom:20px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">
+        Color
+        </p>
+        <div id="pdColors" style="display:flex;flex-wrap:wrap;gap:8px;">
+        </div>
+      </div>
+      <div style="margin-bottom:20px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">
+        Ukuran
+        </p>
+        <span style="display:inline-block;padding:8px 20px;border:1.5px solid #111;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;color:#111;background:#fafaf9;">
+        All Size
+        </span>
+      </div>
+      <div style="margin-bottom:20px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">
+        Quantity
+        </p>
+        <div style="display:flex;align-items:center;gap:0;border:1px solid #ddd;border-radius:8px;width:fit-content;overflow:hidden;">
+        <button onclick="changeQty(-1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#e8e8e8'" onmouseout="this.style.background='#f8f8f8'">
+          −
+        </button>
+        <span id="pdQty" style="width:44px;text-align:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;">
+          1
+        </span>
+        <button onclick="changeQty(1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#e8e8e8'" onmouseout="this.style.background='#f8f8f8'">
+          +
+        </button>
+        </div>
+      </div>
+      <div style="margin-bottom:20px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 8px;">
+        Pengiriman
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;margin:0;">
+        Tersedia via JNE, J&amp;T Express, dan pengambilan di toko. Pilih saat checkout.
+        </p>
+      </div>
+      <div style="margin-bottom:24px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">
+        Email (untuk konfirmasi pesanan)
+        </p>
+        <input id="pdEmail" placeholder="your@email.com" style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" type="email"/>
+      </div>
+      <div style="margin-bottom:28px;padding:16px;background:#f9f8f6;border-radius:10px;">
+        <p id="pdDesc" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#555;line-height:1.7;margin:0 0 8px;">
+        </p>
+        <p id="pdMaterial" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#999;margin:0;">
+        Material:
+        <span id="pdMaterialVal">
+        </span>
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <button onclick="addToCart()" style="width:100%;padding:16px;background:#fff;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:10px;">
+        <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+          </path>
+          <line x1="3" x2="21" y1="6" y2="6">
+          </line>
+          <path d="M16 10a4 4 0 0 1-8 0">
+          </path>
+        </svg>
+        Add to Cart
+        </button>
+        <button onclick="buyNow()" style="width:100%;padding:16px;background:#111;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;color:#fff;cursor:pointer;transition:all 0.25s;">
+        Buy Now
+        </button>
+      </div>
+      <div id="pdToast" style="display:none;margin-top:12px;padding:12px 16px;background:#f0faf4;border:1px solid #b2dfcb;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;color:#2d7a4f;text-align:center;">
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="cartPage" style="display:none;position:fixed;inset:0;z-index:9997;background:#fff;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;padding:0 clamp(12px,4vw,48px);">
+    <div style="max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:0.04em;">
+        Ninetynine
+      </span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#888;">
+        / Shopping Cart
+      </span>
+      </div>
+      <button onclick="closeCartPage()" style="background:none;border:1px solid #ddd;border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:#333;transition:all 0.2s;">
+      ×
+      </button>
+    </div>
+    </header>
+    <div style="max-width:1440px;margin:0 auto;padding:40px clamp(12px,4vw,48px) 80px;">
+    <div id="cartEmpty" style="display:none;text-align:center;padding:80px 20px;">
+      <div style="width:80px;height:80px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+      <svg fill="none" height="36" stroke="#bbb" stroke-width="1.5" viewbox="0 0 24 24" width="36">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+        </path>
+        <line x1="3" x2="21" y1="6" y2="6">
+        </line>
+        <path d="M16 10a4 4 0 0 1-8 0">
+        </path>
+      </svg>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#888;margin:0 0 6px;">
+      Keranjang kamu kosong
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#bbb;margin:0 0 20px;">
+      Yuk, tambahkan produk favorit kamu!
+      </p>
+      <button style="padding:10px 28px;background:#111;color:#fff;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;cursor:pointer;">
+      Belanja Sekarang
+      </button>
+    </div>
+    <div id="cartItems" style="display:none;flex-direction:column;gap:10px;">
+      <div style="background:#fff;border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:10px;">
+      <input id="selectAllCart" style="width:18px;height:18px;accent-color:#D84040;cursor:pointer;" type="checkbox"/>
+      <label for="selectAllCart" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#333;cursor:pointer;">
+        Pilih Semua
+      </label>
+      <button style="margin-left:auto;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;cursor:pointer;padding:4px 8px;border-radius:4px;transition:background 0.2s;">
+        Hapus Dipilih
+      </button>
+      </div>
+      <div style="background:#fff;border-radius:10px;overflow:hidden;">
+      <div style="padding:12px 16px;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:8px;">
+        <svg fill="#D84040" height="14" viewbox="0 0 24 24" width="14">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+        </path>
+        </svg>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#111;">
+        Ninetynine Official Store
+        </span>
+        <span style="margin-left:4px;font-family:'DM Sans',sans-serif;font-size:10px;color:#D84040;border:1px solid #D84040;border-radius:3px;padding:1px 5px;">
+        Official
+        </span>
+      </div>
+      <div id="cartProductList" style="padding:0;">
+      </div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:14px 16px;">
+      <div style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+        <svg fill="none" height="16" stroke="#D84040" stroke-width="2" viewbox="0 0 24 24" width="16">
+        <rect height="12" rx="2" width="22" x="1" y="6">
+        </rect>
+        <path d="M12 6v12M6 12h.01M18 12h.01">
+        </path>
+        </svg>
+        <span style="font-family:'DM Sans',sans-serif;font-size:13px;color:#333;flex:1;">
+        Voucher &amp; Promo
+        </span>
+        <span id="voucherLabel" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;">
+        Pilih Voucher
+        </span>
+        <svg fill="none" height="14" stroke="#999" stroke-width="2" viewbox="0 0 24 24" width="14">
+        <polyline points="9 18 15 12 9 6">
+        </polyline>
+        </svg>
+      </div>
+      <div id="voucherPanel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #f5f5f5;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="voucher-chip" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">
+          🏷 HEMAT 10% · NINETYNINE10
+        </button>
+        <button class="voucher-chip" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">
+          🚚 Gratis Ongkir · ONGKIRFREE
+        </button>
+        <button class="voucher-chip" style="padding:6px 14px;border:1.5px dashed #D84040;border-radius:20px;background:#fff5f5;color:#D84040;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all 0.2s;">
+          🎁 Diskon 15rb · NEWMEMBER
+        </button>
+        </div>
+      </div>
+      </div>
+      <div style="background:#fff;border-radius:10px;padding:14px 16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <svg fill="none" height="16" stroke="#555" stroke-width="2" viewbox="0 0 24 24" width="16">
+        <rect height="13" rx="1" width="15" x="1" y="3">
+        </rect>
+        <path d="M16 8h4l3 5v3h-7V8z">
+        </path>
+        <circle cx="5.5" cy="18.5" r="2.5">
+        </circle>
+        <circle cx="18.5" cy="18.5" r="2.5">
+        </circle>
+        </svg>
+        <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#333;">
+        Pengiriman
+        </span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label id="cship-jne" style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;">
+        <input checked="" name="cartShip" style="accent-color:#D84040;width:15px;height:15px;" type="radio" value="JNE"/>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">
+          JNE Regular
+        </span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">
+          Est. 2-3 hari
+        </span>
+        </label>
+        <label id="cship-jnt" style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;">
+        <input name="cartShip" style="accent-color:#D84040;width:15px;height:15px;" type="radio" value="JNT"/>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">
+          J&amp;T Express
+        </span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">
+          Est. 1-2 hari
+        </span>
+        </label>
+        <label id="cship-pickup" style="display:flex;align-items:center;gap:10px;cursor:pointer;padding:8px 10px;border:1.5px solid #f0f0f0;border-radius:8px;transition:border-color 0.2s;">
+        <input name="cartShip" style="accent-color:#D84040;width:15px;height:15px;" type="radio" value="Pickup"/>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;flex:1;">
+          Ambil di Toko
+        </span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;font-weight:500;">
+          Gratis
+        </span>
+        </label>
+      </div>
+      </div>
+    </div>
+    </div>
+    <div id="cartSummary" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#fff;border-top:1px solid #eee;box-shadow:0 -2px 12px rgba(0,0,0,0.08);">
+    <div style="max-width:960px;margin:0 auto;padding:10px 16px;">
+      <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">
+        Subtotal (
+        <span id="selectedCount">
+          0
+        </span>
+        produk)
+        </span>
+        <span id="cartSubtotal" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;">
+        </span>
+      </div>
+      <div id="discountRow" style="display:none;justify-content:space-between;align-items:center;">
+        <span id="discountLabel" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;">
+        Diskon Voucher
+        </span>
+        <span id="discountAmount" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#D84040;font-weight:500;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:6px;margin-top:2px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;">
+        Total
+        </span>
+        <span id="cartTotal" style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;color:#D84040;">
+        </span>
+      </div>
+      </div>
+      <button onclick="proceedCheckout()" style="width:100%;padding:14px;background:#D84040;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.1em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+        <path d="M5 12h14M12 5l7 7-7 7">
+        </path>
+      </svg>
+      Checkout Sekarang
+      </button>
+    </div>
+    </div>
+  </div>
+  <div id="checkoutPage" style="display:none;position:fixed;inset:0;z-index:10001;background:#f5f5f5;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closeCheckoutPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;" title="Kembali">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+        <line x1="19" x2="5" y1="12" y2="12">
+        </line>
+        <polyline points="12 19 5 12 12 5">
+        </polyline>
+      </svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">
+      Checkout
+      </span>
+      <div style="display:flex;align-items:center;gap:4px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        1
+      </div>
+      <div style="width:20px;height:2px;background:#ddd;">
+      </div>
+      <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        2
+      </div>
+      <div style="width:20px;height:2px;background:#ddd;">
+      </div>
+      <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        3
+      </div>
+      </div>
+    </div>
+    </header>
+    <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+    <div id="checkoutOrderSummary" style="background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 16px;">
+      Data Penerima
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+      <div>
+        <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">
+        Nama Lengkap *
+        </label>
+        <input id="coName" placeholder="Masukkan nama lengkap" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" type="text"/>
+      </div>
+      <div>
+        <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">
+        Email *
+        </label>
+        <input id="coEmail" placeholder="email@example.com" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" type="email"/>
+        <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#aaa;margin:4px 0 0;">
+        Konfirmasi pesanan akan dikirim ke email ini
+        </p>
+      </div>
+      <div>
+        <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">
+        No. HP / WhatsApp
+        </label>
+        <input id="coPhone" placeholder="08xxxxxxxxxx" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" type="tel"/>
+      </div>
+      <div>
+        <label style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;display:block;margin-bottom:5px;">
+        Alamat Lengkap *
+        </label>
+        <textarea id="coAddress" placeholder="Jl. Contoh No. 1, Kelurahan, Kecamatan, Kota, Kode Pos" rows="3" style="width:100%;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;resize:none;transition:border-color 0.2s;"></textarea>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">
+      Metode Pengiriman
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+      <label id="cship-jne" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;">
+        <input checked="" name="coShipping" style="accent-color:#111;width:16px;height:16px;" type="radio" value="JNE Regular"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          JNE Regular
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Estimasi 2–3 hari kerja
+        </p>
+        </div>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">
+        Gratis
+        </span>
+      </label>
+      <label id="cship-jnt" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;">
+        <input name="coShipping" style="accent-color:#111;width:16px;height:16px;" type="radio" value="J&amp;T Express"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          J&amp;T Express
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Estimasi 1–2 hari kerja
+        </p>
+        </div>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;">
+        Gratis
+        </span>
+      </label>
+      <label id="cship-pickup" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;">
+        <input name="coShipping" style="accent-color:#111;width:16px;height:16px;" type="radio" value="Ambil di Toko"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          Ambil di Toko
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Tersedia di semua cabang Ninetynine
+        </p>
+        </div>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#2e7d32;font-weight:600;">
+        Gratis
+        </span>
+      </label>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#888;margin:0 0 14px;">
+      Metode Pembayaran
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+      <label id="pay-bca" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #111;border-radius:10px;transition:all 0.2s;">
+        <input checked="" name="payment" style="accent-color:#111;width:16px;height:16px;" type="radio" value="BCA"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          Transfer BCA
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Virtual Account BCA
+        </p>
+        </div>
+        <span style="background:#005BAC;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">
+        BCA
+        </span>
+      </label>
+      <label id="pay-mandiri" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;">
+        <input name="payment" style="accent-color:#111;width:16px;height:16px;" type="radio" value="Mandiri"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          Transfer Mandiri
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Virtual Account Mandiri
+        </p>
+        </div>
+        <span style="background:#003F88;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">
+        MDR
+        </span>
+      </label>
+      <label id="pay-qris" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:10px;transition:all 0.2s;">
+        <input name="payment" style="accent-color:#111;width:16px;height:16px;" type="radio" value="QRIS"/>
+        <div style="flex:1;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#111;margin:0;font-weight:500;">
+          QRIS
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+          Scan QR dari semua e-wallet &amp; m-banking
+        </p>
+        </div>
+        <span style="background:#E8102C;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;">
+        QRIS
+        </span>
+      </label>
+      </div>
+    </div>
+    </div>
+    <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="goToPaymentStep()" style="width:100%;padding:15px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;">
+      Lanjut ke Pembayaran
+      <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+        <line x1="5" x2="19" y1="12" y2="12">
+        </line>
+        <polyline points="12 5 19 12 12 19">
+        </polyline>
+      </svg>
+      </button>
+    </div>
+    </div>
+  </div>
+  <div id="paymentPage" style="display:none;position:fixed;inset:0;z-index:10002;background:#f5f5f5;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button onclick="closePaymentPage()" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+        <line x1="19" x2="5" y1="12" y2="12">
+        </line>
+        <polyline points="12 19 5 12 12 5">
+        </polyline>
+      </svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">
+      Pembayaran
+      </span>
+      <div style="display:flex;align-items:center;gap:4px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#2e7d32;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        ✓
+      </div>
+      <div style="width:20px;height:2px;background:#111;">
+      </div>
+      <div style="width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        2
+      </div>
+      <div style="width:20px;height:2px;background:#ddd;">
+      </div>
+      <div style="width:24px;height:24px;border-radius:50%;background:#ddd;color:#999;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;">
+        3
+      </div>
+      </div>
+    </div>
+    </header>
+    <div style="max-width:680px;margin:0 auto;padding:20px 16px 100px;">
+    <div style="background:#fff3e0;border-radius:10px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+      <svg fill="none" height="18" stroke="#f57f17" stroke-width="2" viewbox="0 0 24 24" width="18">
+      <circle cx="12" cy="12" r="10">
+      </circle>
+      <polyline points="12 6 12 12 16 14">
+      </polyline>
+      </svg>
+      <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#e65100;">
+      Selesaikan pembayaran dalam:
+      </span>
+      <span id="payTimer" style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#D84040;">
+      </span>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;text-align:center;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 6px;">
+      Total Pembayaran
+      </p>
+      <p id="payTotalAmount" style="font-family:'Playfair Display',serif;font-size:28px;font-weight:500;color:#D84040;margin:0;">
+      </p>
+      <p id="payOrderIdSmall" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#aaa;margin:6px 0 0;">
+      </p>
+    </div>
+    <div id="vaSection" style="background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+      <div id="payBankLogo" style="padding:4px 10px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;background:#005BAC;">
+        BCA
+      </div>
+      <div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0;">
+        Virtual Account
+        </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:2px 0 0;">
+        Salin nomor VA di bawah
+        </p>
+      </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 6px;">
+      Nomor Virtual Account
+      </p>
+      <div style="display:flex;align-items:center;gap:10px;background:#f8f8f8;border-radius:8px;padding:14px 16px;">
+      <span id="vaNumber" style="font-family:'DM Sans',sans-serif;font-size:20px;font-weight:700;color:#111;letter-spacing:0.06em;flex:1;">
+      </span>
+      <button id="copyVABtn" style="background:#111;color:#fff;border:none;border-radius:6px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;white-space:nowrap;transition:background 0.2s;">
+        Salin
+      </button>
+      </div>
+      <div style="margin-top:14px;padding:12px;background:#e8f4ff;border-radius:8px;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#0277bd;margin:0;line-height:1.6;">
+        📌 Cara bayar:
+        <br/>
+        1. Buka m-Banking atau ATM
+        <span id="payBankName">
+        BCA
+        </span>
+        <br/>
+        2. Pilih Transfer → Virtual Account
+        <br/>
+        3. Masukkan nomor VA di atas
+        <br/>
+        4. Konfirmasi jumlah &amp; bayar
+      </p>
+      </div>
+    </div>
+    <div id="qrisSection" style="display:none;background:#fff;border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#111;margin:0 0 4px;">
+      Scan QRIS
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#888;margin:0 0 16px;">
+      Bisa dibayar dengan semua e-wallet &amp; m-banking
+      </p>
+      <div style="display:flex;justify-content:center;margin-bottom:16px;">
+      <div style="position:relative;width:220px;height:220px;background:#fff;border:2px solid #111;border-radius:12px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+        <canvas height="196" id="qrisCanvas" width="196">
+        </canvas>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+        <span style="font-family:'Playfair Display',serif;font-size:10px;font-weight:700;color:#111;">
+          NN
+        </span>
+        </div>
+      </div>
+      </div>
+      <div style="background:#f5f5f5;border-radius:8px;padding:10px 14px;text-align:center;margin-bottom:12px;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#888;margin:0 0 2px;">
+        NMID: ID10230712345678
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#111;margin:0;">
+        Ninetynine Official Store
+      </p>
+      </div>
+      <div style="padding:12px;background:#f3e5f5;border-radius:8px;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:#6a1b9a;margin:0;line-height:1.6;">
+        📌 Cara bayar QRIS:
+        <br/>
+        1. Buka aplikasi e-wallet / m-banking
+        <br/>
+        2. Pilih "Bayar" / "Scan QR"
+        <br/>
+        3. Arahkan kamera ke QR di atas
+        <br/>
+        4. Konfirmasi pembayaran
+      </p>
+      </div>
+    </div>
+    </div>
+    <div style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;padding:12px 16px;z-index:20;">
+    <div style="max-width:680px;margin:0 auto;">
+      <button onclick="confirmPayment()" style="width:100%;padding:15px;background:#2e7d32;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.12em;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;">
+      Saya Sudah Bayar — Konfirmasi
+      <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+        <polyline points="20 6 9 17 4 12">
+        </polyline>
+      </svg>
+      </button>
+    </div>
+    </div>
+  </div>
+  <div id="confirmationPage" style="display:none;position:fixed;inset:0;z-index:10003;background:#f5f5f5;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;">
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;text-align:center;">
+      Pesanan Selesai
+      </span>
+    </div>
+    </header>
+    <div style="max-width:680px;margin:0 auto;padding:20px 16px 80px;">
+    <div style="background:#fff;border-radius:16px;padding:32px 20px;text-align:center;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="width:72px;height:72px;background:#e8f5e9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+      <svg fill="none" height="36" stroke="#2e7d32" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="36">
+        <polyline points="20 6 9 17 4 12">
+        </polyline>
+      </svg>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:#111;margin:0 0 6px;">
+      Pembayaran Dikonfirmasi! 🎉
+      </h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#888;margin:0 0 16px;">
+      Pesananmu sedang diproses oleh Ninetynine
+      </p>
+      <div style="background:#f5f5f5;border-radius:10px;padding:12px 20px;display:inline-block;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:10px;color:#888;margin:0 0 2px;letter-spacing:0.12em;">
+        NOMOR PESANAN
+      </p>
+      <p id="confOrderId" style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#111;margin:0;letter-spacing:0.1em;">
+      </p>
+      </div>
+      <div id="emailSendingNotice" style="margin-top:12px;padding:10px 14px;background:#fff8e1;border-radius:8px;display:block;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#f57f17;margin:0;">
+        ⏳ Mengirim konfirmasi ke email kamu...
+      </p>
+      </div>
+      <div id="emailSentNotice" style="margin-top:12px;padding:10px 14px;background:#e8f5e9;border-radius:8px;display:none;">
+      <p id="emailSentText" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#2e7d32;margin:0;">
+      </p>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;overflow:hidden;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div style="padding:14px 16px;border-bottom:1px solid #f5f5f5;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#111;">
+        Detail Produk
+      </span>
+      </div>
+      <div id="confProductList">
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <h3 style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin:0 0 14px;">
+      Informasi Pesanan
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;justify-content:space-between;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        Waktu Pesan
+        </span>
+        <span id="confDateTime" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        Penerima
+        </span>
+        <span id="confName" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        No. HP
+        </span>
+        <span id="confPhone" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        Alamat
+        </span>
+        <span id="confAddress" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;text-align:right;max-width:200px;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        Pengiriman
+        </span>
+        <span id="confShipping" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;">
+        </span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;min-width:110px;">
+        Pembayaran
+        </span>
+        <span id="confPayment" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#333;font-weight:500;text-align:right;">
+        </span>
+      </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:18px;margin-bottom:20px;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+      <div id="confPriceSummary">
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <button onclick="closeConfirmationPage()" style="width:100%;padding:14px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+      Kembali Belanja
+      </button>
+      <button onclick="openAccountPage()" style="width:100%;padding:14px;background:#fff;border:1.5px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#111;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+        </path>
+        <circle cx="12" cy="7" r="4">
+        </circle>
+      </svg>
+      Lihat Riwayat Pembelian
+      </button>
+      <button style="width:100%;padding:14px;background:#fff;border:1.5px solid #ddd;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#777;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14">
+        <polyline points="6 9 6 2 18 2 18 9">
+        </polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2">
+        </path>
+        <rect height="8" width="12" x="6" y="14">
+        </rect>
+      </svg>
+      Cetak / Simpan PDF
+      </button>
+    </div>
+    </div>
+  </div>
+  <div id="accountPage" style="display:none;position:fixed;inset:0;z-index:10004;background:#f5f5f5;overflow-y:auto;">
+    <header style="position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+    <div style="max-width:680px;margin:0 auto;padding:0 16px;display:flex;align-items:center;height:56px;gap:12px;">
+      <button id="accountPageBackBtn" style="background:none;border:none;cursor:pointer;color:#555;padding:4px;display:flex;align-items:center;justify-content:center;pointer-events:all;" title="Back" type="button">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+        <line x1="19" x2="5" y1="12" y2="12">
+        </line>
+        <polyline points="12 19 5 12 12 5">
+        </polyline>
+      </svg>
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;flex:1;">
+      Riwayat Pembelian
+      </span>
+      <button style="background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;color:#D84040;cursor:pointer;padding:4px 8px;" title="Hapus semua riwayat">
+      Hapus Semua
+      </button>
+    </div>
+    </header>
+    <div style="max-width:680px;margin:0 auto;padding:16px 16px 60px;">
+    <div id="accountEmpty" style="display:none;text-align:center;padding:80px 20px;">
+      <svg fill="none" height="48" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px;" viewbox="0 0 24 24" width="48">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+      </path>
+      <circle cx="12" cy="7" r="4">
+      </circle>
+      </svg>
+      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#888;margin:0 0 4px;">
+      Belum ada riwayat pembelian
+      </p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#bbb;margin:0;">
+      Pesanan yang selesai akan muncul di sini
+      </p>
+    </div>
+    <div id="orderHistoryList" style="display:flex;flex-direction:column;gap:12px;">
+    </div>
+    </div>
+    <style>
+    @media print { body >
+*:not(#confirmationPage) { display: none !important; } #confirmationPage { position: static !important; overflow: visible !important; } #confirmationPage header, #confirmationPage button { display: none !important; } } /* Wishlist button - keep it simple to allow JS changes */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="js/utils.js">
+    </script>
+    <script src="js/product-data.js">
+    </script>
+    <script src="js/main.js">
+    </script>
+    <script src="js/cart.js">
+    </script>
+    <script src="js/wishlist.js">
+    </script>
+    <script src="js/header-scroll.js">
+    </script>
+    <script src="js/search.js">
+    </script>
+    <script src="js/pages.js">
+    </script>
+    <script src="js/event-handlers.js">
+    </script>
+    <div aria-modal="true" id="searchPage" role="dialog" style="display:none;position:fixed;inset:0;z-index:9999;background:#fafafa;flex-direction:column;overflow:hidden;">
+    <header style="padding:24px 16px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:12px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+      <button id="searchPageBackBtn" style="background:none;border:none;cursor:pointer;color:#666;padding:8px;display:flex;align-items:center;transition:color 0.2s;flex-shrink:0;" type="button">
+      <svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24" width="22">
+        <line x1="19" x2="5" y1="12" y2="12">
+        </line>
+        <polyline points="12 19 5 12 12 5">
+        </polyline>
+      </svg>
+      </button>
+      <div style="flex:1;position:relative;display:flex;align-items:center;">
+      <svg fill="none" height="18" stroke="#ccc" stroke-width="2" style="position:absolute;left:14px;pointer-events:none;" viewbox="0 0 24 24" width="18">
+        <circle cx="11" cy="11" r="7">
+        </circle>
+        <line x1="16.5" x2="22" y1="16.5" y2="22">
+        </line>
+      </svg>
+      <input id="searchInput" placeholder="Cari produk..." style="flex:1;border:1.5px solid #f0f0f0;outline:none;font-family:'DM Sans',sans-serif;font-size:16px;background:#f9f9f9;padding:14px 14px 14px 44px;border-radius:10px;transition:all 0.2s;" type="text"/>
+      </div>
+      <button id="searchPageCloseBtn" style="background:none;border:none;cursor:pointer;color:#999;padding:8px;display:flex;align-items:center;transition:color 0.2s;flex-shrink:0;" type="button">
+      <svg fill="none" height="20" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+        <circle cx="12" cy="12" r="10">
+        </circle>
+        <line x1="15" x2="9" y1="9" y2="15">
+        </line>
+        <line x1="9" x2="15" y1="9" y2="15">
+        </line>
+      </svg>
+      </button>
+    </header>
+    <div style="flex:1;overflow-y:auto;padding:24px 16px;">
+      <div id="recommendationsSection">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#111;margin:0 0 16px;letter-spacing:0.5px;">
+        Rekomendasi Untuk Anda
+      </h3>
+      <div id="searchRecommendations" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px;margin-bottom:32px;">
+      </div>
+      </div>
+      <div id="resultsSection" style="display:none;">
+      <h3 id="resultsTitle" style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:#111;margin:0 0 16px;letter-spacing:0.5px;">
+        Hasil Pencarian
+      </h3>
+      <div id="searchResults" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px;">
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- ═══ CATEGORY PAGE ═══ -->
+    <div id="categoryPage" style="display:none;position:fixed;inset:0;z-index:9998;background:#fff;overflow-y:auto;">
+      <!-- Header -->
+      <header style="position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);z-index:10;border-bottom:1px solid #f0f0f0;">
+        <div style="max-width:1440px;margin:0 auto;padding:0 clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;height:64px;">
+          <button onclick="closeCategoryPage()" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;color:#555;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.1em;padding:6px 0;transition:color 0.2s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#555'">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Back
+          </button>
+          <span id="categoryTitle" style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;letter-spacing:0.04em;">Category</span>
+          <div style="width:60px;"></div>
+        </div>
+      </header>
+      <!-- Content -->
+      <div style="max-width:1440px;margin:0 auto;padding:60px clamp(16px,4vw,64px);">
+        <div style="text-align:center;margin-bottom:56px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#999;margin:0 0 12px;">Browse</p>
+          <h1 id="categoryHeading" style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;color:#111;margin:0;line-height:1.2;">Collections</h1>
+        </div>
+        <div id="categoryProductGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px 20px;"></div>
+      </div>
+      <style>
+        @media (max-width: 1100px) {
+          #categoryProductGrid { grid-template-columns: repeat(3, 1fr); gap: 20px 14px; }
+        }
+        @media (max-width: 820px) {
+          #categoryProductGrid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+        }
+        @media (max-width: 600px) {
+          #categoryProductGrid { grid-template-columns: repeat(2, 1fr); gap: 14px 10px; }
+        }
+      </style>
+    </div>
+    <script src="js/reveal-handler.js">
+    </script>
+    <script>
+      // Handle product parameter from category page
+      document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('product');
+        const categoryKey = params.get('cat');
+        
+        if (productId && categoryKey) {
+          setTimeout(() => {
+            openProductDetailCategory(productId);
+          }, 100);
+        }
+      });
+    </script>
+  </div>
+  </body>
+</html>

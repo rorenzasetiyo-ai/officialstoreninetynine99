@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="favicon.ico" rel="icon"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Category - Ninetynine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a class="mobile-menu-brand" data-action="close-menu-scroll" href="#">
+        Ninetynine
+      </a>
+      <button aria-label="Close menu" class="mobile-close" id="mobileClose">×</button>
+    </div>
+    <div class="mobile-menu-links">
+      <button class="mobile-menu-home" data-action="close-menu">
+        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        Home
+      </button>
+      <a class="sale-link" data-action="close-menu" href="#" style="display:block;padding:14px 24px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#B85252;text-decoration:none;border-bottom:1px solid #f5f5f5;transition:background 0.15s, padding-left 0.15s;">Sale</a>
+      <div class="mobile-category-wrapper">
+        <button class="mobile-category-toggle" id="mobileCategoryToggle" style="background:none;border:none;cursor:pointer;display:block;width:100%;padding:14px 24px;text-align:left;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#222;transition:background 0.15s, color 0.15s, padding-left 0.15s;margin:0;border-bottom:1px solid #f5f5f5;">
+          Category
+          <svg id="mobileCategoryArrow" style="float:right;width:14px;height:14px;stroke:currentColor;transition:transform 0.3s ease;margin-top:2px;pointer-events:auto;cursor:pointer;" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div id="mobileCategoryMenu" class="mobile-category-submenu" style="display:none;background:#f9f9f9;overflow:hidden;position:relative;z-index:100;">
+          <a href="category.html?cat=dress" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Dress</a>
+          <a href="category.html?cat=blouse" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Blouse</a>
+          <a href="category.html?cat=tunic" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Tunic</a>
+          <a href="category.html?cat=outer" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Outer</a>
+          <a href="category.html?cat=sweater" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Sweater</a>
+          <a href="category.html?cat=pants" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Pants</a>
+          <a href="category.html?cat=skirt" style="display:block;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.05em;color:#555;text-decoration:none;transition:color 0.2s;border-left:3px solid transparent;">Skirt</a>
+        </div>
+      </div>
+      <a href="#stores" data-action="smooth-scroll" data-target="stores" style="display:block;padding:14px 24px;font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#222;text-decoration:none;border-bottom:1px solid #f5f5f5;transition:background 0.15s, padding-left 0.15s;">
+        Offline Store
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="navbar" class="scrolled">
+    <div class="nav-inner">
+    <button aria-label="Menu" class="hamburger" id="hamburgerBtn">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+    </button>
+    <a class="nav-logo" href="index.html">
+      Ninetynine
+    </a>
+    <nav>
+      <ul class="nav-menu">
+      <li>
+        <a class="sale-link" href="index.html">
+        SALE
+        </a>
+      </li>
+      <li class="has-dropdown" style="position:relative;">
+        <a class="dropdown-trigger" href="#" style="display:flex;align-items:center;cursor:pointer;">
+        Category
+        <svg height="10" style="margin-left:3px;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.3s ease;" viewbox="0 0 24 24" width="10">
+          <polyline points="6 9 12 15 18 9">
+          </polyline>
+        </svg>
+        </a>
+        <ul class="dropdown-menu" style="position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);min-width:180px;background:#111;border-radius:8px;list-style:none;padding:6px 0;margin:0;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:1000;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.25s ease,visibility 0.25s ease;display:none;">
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=dress" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Dress
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=blouse" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Blouse
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=tunic" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Tunic
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=outer" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Outer
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=sweater" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Sweater
+          </a>
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <a href="category.html?cat=pants" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Pants
+          </a>
+        </li>
+        <li>
+          <a href="category.html?cat=skirt" style="display:block;padding:11px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.8);text-decoration:none;transition:all 0.2s ease;">
+          Skirt
+          </a>
+        </li>
+        </ul>
+      </li>
+      <li>
+        <a data-action="smooth-scroll" data-target="stores" href="index.html#stores">
+        Offline Store
+        </a>
+      </li>
+      </ul>
+    </nav>
+    <div class="nav-icons">
+      <a aria-label="Search" class="nav-icon-btn" href="search.html">
+      <svg style="pointer-events:none;" viewbox="0 0 24 24">
+        <circle cx="11" cy="11" r="7">
+        </circle>
+        <line x1="16.5" x2="22" y1="16.5" y2="22">
+        </line>
+      </svg>
+      </a>
+      <button aria-label="Wishlist" class="nav-icon-btn" onclick="window.location.href='index.html#wishlist'" id="navWishlistBtn" style="position:relative;">
+      <span id="wishlistBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#B85252;color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:700;">
+      </span>
+      <svg viewbox="0 0 24 24">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+        </path>
+      </svg>
+      </button>
+      <button aria-label="Cart" class="nav-icon-btn" onclick="window.location.href='index.html#cart'" style="position:relative;cursor:pointer;">
+      <svg viewbox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+        </path>
+        <line x1="3" x2="21" y1="6" y2="6">
+        </line>
+        <path d="M16 10a4 4 0 0 1-8 0">
+        </path>
+      </svg>
+      <span id="cartBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#B85252;color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;font-weight:700;">
+      </span>
+      </button>
+      <button aria-label="Account" class="nav-icon-btn" onclick="window.location.href='index.html#account'">
+      <svg viewbox="0 0 24 24">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+        </path>
+        <circle cx="12" cy="7" r="4">
+        </circle>
+      </svg>
+      </button>
+      <a class="nav-login-link" href="auth.html" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark);text-decoration:none;padding:8px 14px;border:1.5px solid var(--dark);border-radius:6px;cursor:pointer;transition:all 0.3s ease;display:inline-flex;align-items:center;font-weight:500;">
+      Login
+      </a>
+    </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main style="min-height: 80vh; padding: 100px 24px 60px 24px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div style="margin-bottom: 40px;">
+        <a href="index.html" style="font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.1em;color:#666;text-decoration:none;margin-right:8px;transition:color 0.2s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#666'">← BACK</a>
+        <h1 id="categoryTitle" style="font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,52px);font-weight:400;color:#111;margin:24px 0 0 0;line-height:1.2;">Category</h1>
+      </div>
+
+      <div id="categoryGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px 20px;"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+      <div class="footer-logo">
+        Ninetynine
+      </div>
+      <p>
+        A women's fashion brand celebrating timeless elegance, modern femininity, and the beauty of simplicity.
+      </p>
+      <div class="social-icons">
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="Instagram">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <rect height="20" rx="5" ry="5" width="20" x="2" y="2">
+          </rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
+          </path>
+          <circle cx="17.5" cy="6.5" fill="white" r="1.5">
+          </circle>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="Facebook">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z">
+          </path>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="X">
+        <svg fill="white" height="20" viewbox="0 0 24 24" width="20">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.604l-5.195-6.791-5.956 6.791H2.421l7.727-8.835L.754 2.25h6.78l4.713 6.231 5.476-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+          </path>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-right:8px;transition:all 0.3s ease;" title="LinkedIn">
+        <svg fill="none" height="20" stroke="white" stroke-width="2" viewbox="0 0 24 24" width="20">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+          </path>
+          <rect height="12" width="4" x="2" y="9">
+          </rect>
+          <circle cx="4" cy="4" r="2">
+          </circle>
+        </svg>
+        </a>
+        <a class="social-icon" href="#" style="overflow:hidden;padding:4px;background:#000;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;transition:all 0.3s ease;" title="Cloudflare">
+        <svg fill="white" height="20" viewbox="0 0 24 24" width="20">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z">
+          </path>
+        </svg>
+        </a>
+      </div>
+      </div>
+      <div class="footer-col">
+      <h4>
+        Fashion
+      </h4>
+      <ul>
+        <li>
+        <a href="#">
+          About Ninetynine
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          Our Story
+        </a>
+        </li>
+        <li>
+        <a data-action="smooth-scroll" data-target="stores" href="index.html#stores">
+          Offline Store
+        </a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer-col">
+      <h4>
+        Customer Service
+      </h4>
+      <ul>
+        <li>
+        <a href="#">
+          Shipping Information
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          FAQ
+        </a>
+        </li>
+        <li>
+        <a href="#">
+          Contact Us
+        </a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+      <h4>
+        Stay Updated
+      </h4>
+      <p>
+        Subscribe for new arrivals, exclusive offers, and style inspiration.
+      </p>
+      <div class="newsletter-form">
+        <input placeholder="Your email address" type="email"/>
+        <button type="submit">
+        Subscribe
+        </button>
+      </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>
+      © 2026 Ninetynine. All rights reserved.
+      </span>
+      <div class="footer-bottom-links">
+      <a href="#">
+        Privacy Policy
+      </a>
+      <a href="#">
+        Terms of Service
+      </a>
+      <a href="#">
+        Cookie Policy
+      </a>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/product-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/event-handlers.js"></script>
+  <script>
+    // Get category from URL
+    const params = new URLSearchParams(window.location.search);
+    const categoryKey = params.get('cat') || 'dress';
+    
+    // Map for display names
+    const categoryNames = {
+      'dress': 'Dress',
+      'blouse': 'Blouse',
+      'tunic': 'Tunic',
+      'outer': 'Outer',
+      'sweater': 'Sweater',
+      'pants': 'Pants',
+      'skirt': 'Skirt'
+    };
+
+    // Render category page
+    function renderCategory() {
+      const categoryName = categoryNames[categoryKey] || 'Category';
+      document.getElementById('categoryTitle').textContent = categoryName;
+      
+      const products = getCategoryProducts(categoryKey);
+      const grid = document.getElementById('categoryGrid');
+      
+      let html = '';
+      products.forEach(prod => {
+        html += `
+        <div class="product-card-cat" style="cursor:pointer;transition:transform 0.4s ease;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+          <div class="product-img-wrap" style="position:relative;overflow:hidden;background:#f2f2f2;aspect-ratio:3/4;border-radius:12px;margin-bottom:4px;" onclick="goToProduct('${prod.id}')">
+            <img id="${prod.imgMainId}" src="${prod.mainImage}" loading="lazy" class="img-main" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.45s ease, transform 0.6s ease;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3C/svg%3E'">
+            <img id="${prod.imgHoverId}" src="${prod.hoverImage}" loading="lazy" class="img-hover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 0.45s ease, transform 0.6s ease;" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f0f0f0%22 width=%22100%22 height=%22100%22/%3E%3C/svg%3E'">
+          </div>
+          <div class="product-info" style="padding:14px 4px 0;">
+            <p class="product-series" style="font-size:11px;color:#aaa;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;">${prod.series}</p>
+            <p class="product-name" style="font-size:13px;font-weight:400;letter-spacing:0.02em;color:#333;margin-bottom:4px;">${prod.name}</p>
+            <p style="font-size:12px;color:#111;font-weight:500;">${prod.price}</p>
+          </div>
+        </div>
+        `;
+      });
+      
+      grid.innerHTML = html;
+    }
+
+    // Navigate to product
+    function goToProduct(productId) {
+      window.location.href = `index.html?product=${productId}&cat=${categoryKey}`;
+    }
+
+    // Mobile category toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategory();
+      
+      // Update badge counts from localStorage
+      if (typeof updateCartBadges === 'function') updateCartBadges();
+      if (typeof updateWishlistBadge === 'function') updateWishlistBadge();
+      
+      const categoryToggle = document.getElementById('mobileCategoryToggle');
+      const categoryMenu = document.getElementById('mobileCategoryMenu');
+      const categoryArrow = document.getElementById('mobileCategoryArrow');
+      
+      if (categoryToggle && categoryMenu) {
+        categoryToggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isOpen = categoryMenu.style.display === 'block';
+          categoryMenu.style.display = isOpen ? 'none' : 'block';
+          if (categoryArrow) {
+            categoryArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

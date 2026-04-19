@@ -1,0 +1,103 @@
+<div id="productDetailPage" style="display:none;position:fixed;inset:0;z-index:9998;background:#fff;overflow-y:auto;">
+  <!-- Sticky header -->
+  <header style="position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);z-index:10;border-bottom:1px solid #f0f0f0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;height:64px;">
+      <button onclick="closeProductDetail()" style="background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:8px;color:#555;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.1em;padding:6px 0;transition:color 0.2s;" onmouseover="this.style.color='#000'" onmouseout="this.style.color='#555'">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back
+      </button>
+      <span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;letter-spacing:0.04em;">Ninetynine</span>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <button id="pdWishlistBtn" onclick="togglePdWishlist()" style="background:none;border:none;cursor:pointer;padding:6px;color:#333;transition:color 0.2s;" title="Add to wishlist" onmouseover="this.style.color='#B85252'" onmouseout="this.style.color='#333'">
+          <svg id="pdWishlistIcon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div style="max-width:1200px;margin:0 auto;padding:32px clamp(16px,4vw,48px) 80px;">
+    <div id="pdContent" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      
+      <!-- Left: Images -->
+      <div>
+        <div id="pdMainImg" style="border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;margin-bottom:12px;cursor:zoom-in;">
+          <img id="pdImg1" loading="lazy" loading="lazy" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:opacity 0.3s;">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div id="pdThumb1" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid #111;">
+            <img id="pdThumbImg1" loading="lazy" loading="lazy" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <div id="pdThumb2" style="border-radius:10px;overflow:hidden;aspect-ratio:3/4;background:#f5f5f5;cursor:pointer;border:2px solid transparent;">
+            <img id="pdThumbImg2" loading="lazy" loading="lazy" src="" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Info + Form -->
+      <div style="padding-top:8px;">
+        <p id="pdSeries" style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#999;margin:0 0 8px;"></p>
+        <h1 id="pdName" style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:500;color:#111;margin:0 0 8px;line-height:1.2;"></h1>
+        <p id="pdPrice" style="font-family:'DM Sans',sans-serif;font-size:22px;font-weight:500;color:#111;margin:0 0 20px;letter-spacing:0.02em;"></p>
+
+        <div style="width:40px;height:1px;background:#e0e0e0;margin-bottom:20px;"></div>
+
+        <!-- Color -->
+        <div id="pdColorSection" style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Color</p>
+          <div id="pdColors" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+        </div>
+
+        <!-- Size: All Size only -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Ukuran</p>
+          <span style="display:inline-block;padding:8px 20px;border:1.5px solid #111;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.12em;color:#111;background:#fafaf9;">All Size</span>
+        </div>
+
+        <!-- Qty -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Quantity</p>
+          <div style="display:flex;align-items:center;gap:0;border:1px solid #ddd;border-radius:8px;width:fit-content;overflow:hidden;">
+            <button onclick="changeQty(-1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#f8f8f8'">−</button>
+            <span id="pdQty" style="width:44px;text-align:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;">1</span>
+            <button onclick="changeQty(1)" style="background:#f8f8f8;border:none;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#f8f8f8'">+</button>
+          </div>
+        </div>
+
+        <!-- Shipping info -->
+        <div style="margin-bottom:20px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 8px;">Pengiriman</p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:#888;margin:0;">Tersedia via JNE, J&T Express, dan pengambilan di toko. Pilih saat checkout.</p>
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom:24px;">
+          <p style="font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#666;margin:0 0 10px;">Email (untuk konfirmasi pesanan)</p>
+          <input id="pdEmail" type="email" placeholder="your@email.com" style="width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#333;outline:none;box-sizing:border-box;transition:border-color 0.2s;" onfocus="this.style.borderColor='#111'" onblur="this.style.borderColor='#ddd'">
+        </div>
+
+        <!-- Description -->
+        <div style="margin-bottom:28px;padding:16px;background:#f9f8f6;border-radius:10px;">
+          <p id="pdDesc" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#555;line-height:1.7;margin:0 0 8px;"></p>
+          <p id="pdMaterial" style="font-family:'DM Sans',sans-serif;font-size:11px;color:#999;margin:0;">Material: <span id="pdMaterialVal"></span></p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <button onclick="addToCart()" style="width:100%;padding:16px;background:#fff;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:10px;" onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='#fff'">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+          <button onclick="buyNow()" style="width:100%;padding:16px;background:#111;border:2px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;color:#fff;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+            Buy Now
+          </button>
+        </div>
+
+        <!-- Toast message -->
+        <div id="pdToast" style="display:none;margin-top:12px;padding:12px 16px;background:#f0faf4;border:1px solid #b2dfcb;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;color:#2d7a4f;text-align:center;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART PAGE -->

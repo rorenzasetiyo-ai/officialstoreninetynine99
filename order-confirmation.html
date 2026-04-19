@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
+NINETYNINE - Order Confirmation</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9f9f9; } .confirmation-container { max-width: 600px; margin: 100px auto; padding: 40px; background: white; border-radius: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); } .success-icon { font-size: 64px; margin-bottom: 20px; } h1 { font-size: 28px; margin-bottom: 10px; color: #000; } .subtitle { font-size: 14px; color: #666; margin-bottom: 30px; } .order-details { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: left; } .detail-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; } .detail-row:last-child { border-bottom: none; } .detail-label { font-weight: 600; color: #666; } .detail-value { color: #000; } .next-steps { background: #d1ecf1; border-left: 4px solid #0c5460; padding: 15px; margin-bottom: 30px; border-radius: 4px; text-align: left; color: #0c5460; } .next-steps strong { display: block; margin-bottom: 8px; } .next-steps p { margin-bottom: 8px; font-size: 14px; } .next-steps p:last-child { margin-bottom: 0; } .action-buttons { display: flex; gap: 10px; justify-content: center; } .btn { padding: 12px 30px; border: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s; } .btn-primary { background: #000; color: white; } .btn-primary:hover { background: #333; } .btn-secondary { background: #f0f0f0; color: #000; border: 1px solid #ddd; } .btn-secondary:hover { background: #e0e0e0; }</style>
+</head>
+<body><div class="confirmation-container"><div class="success-icon">
+✅</div>
+<h1>
+Pesanan Berhasil Dibuat!</h1>
+<p class="subtitle">
+Terima kasih telah berbelanja di NINETYNINE</p>
+<div class="order-details" id="orderDetails"><div class="detail-row"><span class="detail-label">
+No. Pesanan</span>
+<span class="detail-value" id="orderNumber">
+-</span>
+</div>
+<div class="detail-row"><span class="detail-label">
+Nama</span>
+<span class="detail-value" id="customerName">
+-</span>
+</div>
+<div class="detail-row"><span class="detail-label">
+Email</span>
+<span class="detail-value" id="customerEmail">
+-</span>
+</div>
+<div class="detail-row"><span class="detail-label">
+Total</span>
+<span class="detail-value" id="orderTotal">
+-</span>
+</div>
+<div class="detail-row"><span class="detail-label">
+Status</span>
+<span class="detail-value">
+⏳ Menunggu Pembayaran</span>
+</div>
+</div>
+<div class="next-steps"><strong>
+📋 Langkah Selanjutnya:</strong>
+<p>
+1. Segera lakukan pembayaran ke nomor rekening yang akan kami kirim via email</p>
+<p>
+2. Upload bukti pembayaran untuk mempercepat proses</p>
+<p>
+3. Pesanan akan dikirim setelah pembayaran dikonfirmasi (1x24 jam)</p>
+<p>
+4. Cek status pesanan di email Anda</p>
+</div>
+<div class="action-buttons" style="flex-direction: column; gap: 10px;">
+<button style="width:100%;padding:14px;background:#111;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;color:#fff;cursor:pointer;transition:background 0.2s;" onclick="goHome()" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">
+Kembali Belanja
+</button>
+<button style="width:100%;padding:14px;background:#fff;border:1.5px solid #111;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#111;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:8px;" onclick="goOrderHistory()">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14">
+<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+<circle cx="12" cy="7" r="4"></circle>
+</svg>
+Lihat Riwayat Pembelian
+</button>
+</div>
+</div>
+<script>
+function goHome() {
+  window.location.href = 'index.html';
+}
+
+function goOrderHistory() {
+  window.location.href = 'index.html?view=orderHistory';
+}
+
+function init() { const params = new URLSearchParams(window.location.search); const orderData = params.get('order'); if (orderData) { try { const order = JSON.parse(atob(orderData)); // Generate order ID const orderID = 'NN-' + Date.now().toString().slice(-8); document.getElementById('orderNumber').textContent = orderID; document.getElementById('customerName').textContent = order.fullName; document.getElementById('customerEmail').textContent = order.email; document.getElementById('orderTotal').textContent = order.total; // Save to localStorage for history order.id = orderID; let orders = JSON.parse(localStorage.getItem('ninetynine_all_orders') || '[]'); orders.push(order); localStorage.setItem('ninetynine_all_orders', JSON.stringify(orders)); } catch (e) { console.error('Could not parse order data'); } } } function downloadReceipt() { const orderNumber = document.getElementById('orderNumber').textContent; const receipt = 'NINETYNINE Order Receipt\n\n' + 'Order #: ' + orderNumber + '\n' + 'Name: ' + document.getElementById('customerName').textContent + '\n' + 'Email: ' + document.getElementById('customerEmail').textContent + '\n' + 'Total: ' + document.getElementById('orderTotal').textContent + '\n' + 'Date: ' + new Date().toLocaleDateString('id-ID') + '\n\n' + 'Thank you for shopping with NINETYNINE!'; const blob = new Blob([receipt], { type: 'text/plain' }); const url = window.URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'receipt-' + orderNumber + '.txt'; a.click(); } init();</script>
+</body>
+</html>
