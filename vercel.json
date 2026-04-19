@@ -27,7 +27,7 @@ Security Headers vercel.JSON
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:;"
+          "value": "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self' data:;"
         }
       ]
     }
